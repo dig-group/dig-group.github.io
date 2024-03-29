@@ -1,0 +1,105 @@
+.container{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.imgtable {  
+  /* 设置表格宽度 */  
+  width: 100%;  
+    
+  /* 设置表格边框样式 */  
+  border-collapse: collapse;  
+    
+  /* 表格的间距 */  
+  border-spacing: 0;  
+}  
+  
+.imgtable th,  
+.imgtable td {   
+  /* 设置单元格内边距 */  
+  padding: 8px;  
+
+  /* 设置文本对齐方式 */  
+  text-align: left;  
+    
+  /* 设置垂直对齐方式 */  
+  vertical-align: top; 
+}  
+  
+.imgtable th {  
+  /* 表头背景色 */  
+  background-color: white;  
+    
+  /* 表头字体加粗 */  
+  font-weight: bold;  
+}  
+  
+.imgtable img {  
+  /* 图片最大宽度，防止图片撑破表格 */  
+  max-width: 100%;  
+    
+  /* 图片高度自动调整，保持比例 */  
+  height: auto;  
+    
+  /* 图片与单元格边距 */  
+  margin: 0px;  
+    
+  /* 图片下方添加一些间距 */  
+  margin-bottom: 4px;  
+    
+  /* 垂直对齐方式 */  
+  vertical-align: middle;
+  
+  margin-right: 0 auto;
+}  
+
+.imgtable h1{
+    /* 设置字体颜色 */
+    color: #2a5caa;
+    
+
+}
+
+.introduction h1 {  
+    color: #0b0222;  
+    font-size: 24px;   
+    margin-bottom: 20px;  
+}  
+
+.introduction p,
+.introduction li {  
+    color: #2e2424;  
+    font-size: 16px;  
+    line-height: 1.6;  
+    margin-bottom: 15px;  
+}  
+
+.introduction a{  
+    color: #2e2424;  
+    text-decoration: none;  
+    border-bottom: 1px solid #007BFF;  
+    transition: color 0.3s ease, border-color 0.3s ease;  
+}  
+
+.introduction a:hover {  
+    color: #0056b3;  
+    border-bottom-color: #0056b3;  
+}  
+
+.introduction strong{
+  color: red;
+  font-weight: 800;
+  margin-left: 25px;
+}
+
+/* Footer样式 */  
+
+footer {  
+  background-color: #333; /* 背景颜色 */  
+  color: #fff; /* 文字颜色 */  
+  padding: 20px; /* 内边距 */  
+  text-align: center; /* 文字居中 */   
+  bottom: 0; /* 底部对齐 */  
+  width: 100%; /* 宽度100% */  
+}  
+
