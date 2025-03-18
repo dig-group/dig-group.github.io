@@ -455,7 +455,7 @@
                   padding: 2rem;
             }
 
-            .contact-visual {
+/*             .contact-visual {
                   flex: 1;
                   min-width: 400px;
                   border-radius: 8px;
@@ -467,7 +467,45 @@
                   height: 100%;
                   object-fit: cover;
                   border-left: 4px solid #3498db; /* 学术蓝装饰线 */
+            } */
+
+
+            .contact-visual {
+            flex: 1;
+            min-width: 380px;  /* 适当缩小最小宽度 */
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative; /* 新增定位上下文 */
+            display: flex;      /* 启用flex布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            background: #f8fafc; /* 新增浅色背景 */
+            padding: 2rem;      /* 增加内边距 */
             }
+
+            .lab-image {
+            width: auto;        /* 改为自适应宽度 */
+            height: auto;       /* 改为自适应高度 */
+            max-width: 100%;    /* 限制最大宽度 */
+            max-height: 280px;  /* 限制最大高度 */
+            object-fit: contain; /* 完整显示图片 */
+            transition: transform 0.3s;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); /* 添加柔和投影 */
+            }
+
+            /* 新增装饰线（替代原border方案） */
+            .contact-visual::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 80%;
+            background: #3498db;
+            border-radius: 2px;
+            }
+
 
             @media (max-width: 768px) {
                   .contact-container {
@@ -478,6 +516,113 @@
                         min-width: 100%;
                         height: 300px;
                   }
+            }
+
+
+            @media (max-width: 1024px) {
+            .contact-visual {
+                  min-width: 320px;
+                  padding: 1.5rem;
+            }
+            
+            .lab-image {
+                  max-height: 240px;
+            }
+            }
+
+            @media (max-width: 768px) {
+            .contact-visual {
+                  min-width: 100%;
+                  height: 300px;
+            }
+            
+            .lab-image {
+                  max-height: 200px;
+            }
+            
+            .contact-visual::before {
+                  height: 70%;
+            }
+            }
+
+
+            /* 在原CSS基础上新增以下样式 */
+            .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 15px 0;
+            }
+
+            .contact-item {
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            }
+
+            .contact-item:hover {
+            transform: translateY(-2px);
+            }
+
+            .contact-item h3 {
+            margin: 0 0 8px;
+            color: #2c3e50;
+            font-size: 1.1em;
+            font-weight: 600;
+            }
+
+            .contact-item p {
+            margin: 4px 0;
+            font-size: 0.95em;
+            }
+
+            .lab-address {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 20px;
+            }
+
+            .lab-address p {
+            color: #777;
+            font-size: 0.9em;
+            line-height: 1.4;
+            }
+
+            /* 响应式调整 */
+            @media (max-width: 768px) {
+            .contacts-grid {
+                  grid-template-columns: 1fr;
+            }
+            
+            .contact-item {
+                  padding: 12px;
+            }
+            }
+
+            /* 优化原有样式 */
+            .contact-info {
+            flex: 2;
+            padding-left: 25px;  /* 原20px调整为25px */
+            }
+
+            .contact-info h2 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 8px;
+            }
+
+            .contact-info h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #3498db;
             }
 
             .Vs12Bd {
@@ -2218,15 +2363,46 @@
                                                 <div class="contact-item">
                                                       <div class="contact-label">实验室联系人</div>
                                                       <div class="contact-detail">姜桂圆</div>
-                                                </div>
-
-                                                <div class="contact-item">
                                                       <div class="contact-label">电子邮箱</div>
                                                       <div class="contact-detail">
                                                             <a href="jiangguiyuan@ouc.edu.cn">jiangguiyuan@ouc.edu.cn</a>
                                                       </div>
                                                 </div>
-
+                                          </div>
+                                          <div class="contact-list">
+                                                <div class="contact-item">
+                                                      <div class="contact-label">实验室联系人</div>
+                                                      <div class="contact-detail">贺佩兰</div>
+                                                      <div class="contact-label">电子邮箱</div>
+                                                      <div class="contact-detail">
+                                                            <a href=" hepeilan@ouc.edu.cn"> hepeilan@ouc.edu.cn</a>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                                
+                                          <div class="contact-list">
+                                                <div class="contact-item">
+                                                      <div class="contact-label">实验室联系人</div>
+                                                      <div class="contact-detail">李权峰</div>
+                                                      <div class="contact-label">手机</div>
+                                                      <div class="contact-detail">
+                                                            <p>17853985665</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                                
+                                          <div class="contact-list">
+                                                <div class="contact-item">
+                                                      <div class="contact-label">实验室联系人</div>
+                                                      <div class="contact-detail">刘泷泽</div>
+                                                      <div class="contact-label">手机</div>
+                                                      <div class="contact-detail">
+                                                            <p>15621099982</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          
+                                          <div class="contact-list">
                                                 <div class="contact-item">
                                                       <div class="contact-label">实验室地址</div>
                                                       <address class="contact-detail">

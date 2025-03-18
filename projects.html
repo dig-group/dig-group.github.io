@@ -2,6 +2,26 @@
 <html lang="zh-CN" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入jQuery-->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+      <!-- 引入lightbox2库 -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- 配置lightbox2 -->
+      <script>
+            lightbox.option({
+                  'resizeDuration': 200,
+                  'wrapAround': true,
+                  'fadeDuration': 200,
+                  'imageFadeDuration': 200,
+                  'positionFromTop': 50,
+                  'disableScrolling': true,
+                  'albumLabel': "图片 %1 / %2"
+            })
+      </script>
       <script nonce="jQx65DV8rSpimKkCFdcE0w">
             window['ppConfig'] = {
                   productName: '6b8ce7c01e3dacd3d2c7a8cd322ff979',
@@ -11,12 +31,12 @@
                   periodicReportingRateMillis: 60000.0,
                   disableAllReporting: false
             };
-            (function() {
+            (function () {
                   'use strict';
 
                   function k(a) {
                         var b = 0;
-                        return function() {
+                        return function () {
                               return b < a.length ? {
                                     done: !1,
                                     value: a[b++]
@@ -25,7 +45,7 @@
                               }
                         }
                   }
-                  var l = typeof Object.defineProperties == "function" ? Object.defineProperty : function(a, b, c) {
+                  var l = typeof Object.defineProperties == "function" ? Object.defineProperty : function (a, b, c) {
                         if (a == Array.prototype || a == Object.prototype) return a;
                         a[b] = c.value;
                         return a
@@ -69,13 +89,13 @@
                         };
                         throw Error(String(a) + " is not an iterable or ArrayLike");
                   }
-                  p("Object.is", function(a) {
-                        return a ? a : function(b, c) {
+                  p("Object.is", function (a) {
+                        return a ? a : function (b, c) {
                               return b === c ? b !== 0 || 1 / b === 1 / c : b !== b && c !== c
                         }
                   });
-                  p("Array.prototype.includes", function(a) {
-                        return a ? a : function(b, c) {
+                  p("Array.prototype.includes", function (a) {
+                        return a ? a : function (b, c) {
                               var d = this;
                               d instanceof String && (d = String(d));
                               var e = d.length;
@@ -87,8 +107,8 @@
                               return !1
                         }
                   });
-                  p("String.prototype.includes", function(a) {
-                        return a ? a : function(b, c) {
+                  p("String.prototype.includes", function (a) {
+                        return a ? a : function (b, c) {
                               if (this == null) throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");
                               if (b instanceof RegExp) throw new TypeError("First argument to String.prototype.includes must not be a regular expression");
                               return this.indexOf(b, c || 0) !== -1
@@ -101,7 +121,7 @@
 
                   function t() {
                         var a;
-                        if ((a = window.ppConfig) == null ? 0 : a.disableAllReporting) return function() {};
+                        if ((a = window.ppConfig) == null ? 0 : a.disableAllReporting) return function () { };
                         var b, c, d, e;
                         return (e = (b = window) == null ? void 0 : (c = b.navigator) == null ? void 0 : (d = c.sendBeacon) == null ? void 0 : d.bind(navigator)) != null ? e : u
                   }
@@ -114,11 +134,11 @@
 
                   function v() {
                         var a = (w = Object.prototype) == null ? void 0 : w.__lookupGetter__("__proto__"),
-                                b = x,
-                                c = y;
-                        return function() {
+                              b = x,
+                              c = y;
+                        return function () {
                               var d = a.call(this),
-                                      e, f, g, h;
+                                    e, f, g, h;
                               r(c, b, {
                                     type: "ACCESS_GET",
                                     origin: (f = window.location.origin) != null ? f : "unknown",
@@ -133,9 +153,9 @@
 
                   function z() {
                         var a = (A = Object.prototype) == null ? void 0 : A.__lookupSetter__("__proto__"),
-                                b = x,
-                                c = y;
-                        return function(d) {
+                              b = x,
+                              c = y;
+                        return function (d) {
                               d = a.call(this, d);
                               var e, f, g, h;
                               r(c, b, {
@@ -152,22 +172,22 @@
 
                   function B(a, b) {
                         C(a.productName, b);
-                        setInterval(function() {
+                        setInterval(function () {
                               C(a.productName, b)
                         }, a.periodicReportingRateMillis)
                   }
                   var D = "constructor __defineGetter__ __defineSetter__ hasOwnProperty __lookupGetter__ __lookupSetter__ isPrototypeOf propertyIsEnumerable toString valueOf __proto__ toLocaleString x_ngfn_x".split(" "),
-                          E = D.concat,
-                          F = navigator.userAgent.match(/Firefox\/([0-9]+)\./),
-                          G = (!F || F.length < 2 ? 0 : Number(F[1]) < 75) ? ["toSource"] : [],
-                          H;
+                        E = D.concat,
+                        F = navigator.userAgent.match(/Firefox\/([0-9]+)\./),
+                        G = (!F || F.length < 2 ? 0 : Number(F[1]) < 75) ? ["toSource"] : [],
+                        H;
                   if (G instanceof Array) H = G;
                   else {
                         for (var I = q(G), J, K = []; !(J = I.next()).done;) K.push(J.value);
                         H = K
                   }
                   var L = E.call(D, H),
-                          M = [];
+                        M = [];
 
                   function C(a, b) {
                         for (var c = [], d = q(Object.getOwnPropertyNames(Object.prototype)), e = d.next(); !e.done; e = d.next()) e = e.value, L.includes(e) || M.includes(e) || c.push(e);
@@ -195,14 +215,14 @@
                         }
                   };
                   var N = Math.random(),
-                          O = t(),
-                          P = window.ppConfig;
+                        O = t(),
+                        P = window.ppConfig;
                   P && (P.disableAllReporting || P.deleteIsEnforced && P.sealIsEnforced || N < P.heartbeatRate && r(O, P.productName, {
                         origin: window.location.origin,
                         type: "HEARTBEAT"
                   }));
                   var y = t(),
-                          Q = window.ppConfig;
+                        Q = window.ppConfig;
                   if (Q)
                         if (Q.deleteIsEnforced) delete Object.prototype.__proto__;
                         else if (!Q.disableAllReporting) {
@@ -214,12 +234,12 @@
                                           get: v(),
                                           set: z()
                                     })
-                              } catch (a) {}
+                              } catch (a) { }
                         }
-                  (function() {
+                  (function () {
                         var a = t(),
-                                b = window.ppConfig;
-                        b && (b.sealIsEnforced ? Object.seal(Object.prototype) : b.disableAllReporting || (document.readyState !== "loading" ? B(b, a) : document.addEventListener("DOMContentLoaded", function() {
+                              b = window.ppConfig;
+                        b && (b.sealIsEnforced ? Object.seal(Object.prototype) : b.disableAllReporting || (document.readyState !== "loading" ? B(b, a) : document.addEventListener("DOMContentLoaded", function () {
                               B(b, a)
                         })))
                   })();
@@ -333,19 +353,31 @@
       <meta itemprop="description" content="Machine Learning in Small Datasets
 ">
       <meta itemprop="url" content="https://www.mcgillresearchgroup.com/projects">
-      <meta itemprop="thumbnailUrl" content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
-      <meta itemprop="image" content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
-      <meta itemprop="imageUrl" content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
-      <meta property="og:image" content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
-      <link href="static/css/css-RobotoCondensed400700OpenSans400700_swap.css" rel="stylesheet" nonce="sEKFvbvz0Neo-03-LtTwPg">
-      <link href="static/css/css-GoogleSans400500Roboto300400500700SourceCodePro400700_swap.css" rel="stylesheet" nonce="sEKFvbvz0Neo-03-LtTwPg">
-      <link rel="stylesheet" href="static/css/rs=AGEqA5kVroorN_ei-bTy5rVw-D5HL0_75Q.css" data-id="_cl" nonce="sEKFvbvz0Neo-03-LtTwPg">
+      <meta itemprop="thumbnailUrl"
+            content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
+      <meta itemprop="image"
+            content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
+      <meta itemprop="imageUrl"
+            content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
+      <meta property="og:image"
+            content="https://lh4.googleusercontent.com/SReiX-jafIG3RwXjDY93fBzLcmCR1XJr7tvudoX2zNbrS8YMG5pvmqligMIZdVHbubWfKcE5_w1gjbFmI_K3v7mOxibQyk7RPW5oMkmeS5MTC2V7OEu8jwbieAn7V3htLQ=w1280">
+      <link href="static/css/css-RobotoCondensed400700OpenSans400700_swap.css" rel="stylesheet"
+            nonce="sEKFvbvz0Neo-03-LtTwPg">
+      <link href="static/css/css-GoogleSans400500Roboto300400500700SourceCodePro400700_swap.css" rel="stylesheet"
+            nonce="sEKFvbvz0Neo-03-LtTwPg">
+      <link rel="stylesheet" href="static/css/rs=AGEqA5kVroorN_ei-bTy5rVw-D5HL0_75Q.css" data-id="_cl"
+            nonce="sEKFvbvz0Neo-03-LtTwPg">
       <script nonce="jQx65DV8rSpimKkCFdcE0w"></script>
       <title>McGill Research Group - Projects</title>
       <style jsname="ptDGoc" nonce="sEKFvbvz0Neo-03-LtTwPg">
             .ImnMyf {
-                  background-color: rgba(255,255,255,1);
-                  color: rgba(33,33,33,1);
+                  background-color: rgba(255, 255, 255, 1);
+                  color: rgba(33, 33, 33, 1);
+            }
+
+            .research-container p {
+                  color: #000;
+                  margin-bottom: 20px;
             }
 
             /*导航栏*/
@@ -353,14 +385,17 @@
                   position: absolute;
                   right: 45px;
                   top: 5px;
-                  z-index: 1000; /* 确保在最上层 */
+                  z-index: 1000;
+                  /* 确保在最上层 */
             }
+
             .nav-list {
                   display: flex;
                   gap: 30px;
                   list-style: none;
                   padding: 0;
             }
+
             .nav-link {
                   color: white !important;
                   text-decoration: none;
@@ -368,6 +403,7 @@
                   display: inline-block;
                   padding: 10px 0;
             }
+
             .nav-link.active::after {
                   content: "";
                   position: absolute;
@@ -407,7 +443,7 @@
                   margin: 2rem auto;
                   display: block;
                   border-radius: 6px;
-                  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
 
             .highlight {
@@ -423,18 +459,22 @@
             }
 
             .research-item {
-                  flex: 1 1 400px;  /* 基础宽度400px，可根据容器自动伸缩 */
-                  min-width: 350px;  /* 最小显示宽度 */
-                  max-width: 500px;  /* 最大显示宽度 */
+                  flex: 1 1 400px;
+                  /* 基础宽度400px，可根据容器自动伸缩 */
+                  min-width: 350px;
+                  /* 最小显示宽度 */
+                  max-width: 500px;
+                  /* 最大显示宽度 */
             }
 
             .research-image {
                   width: 100%;
-                  height: 280px;     /* 固定高度保证视觉统一 */
+                  height: 280px;
+                  /* 固定高度保证视觉统一 */
                   object-fit: contain;
                   border: 1px solid #f0f0f0;
                   border-radius: 6px;
-                  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
             }
 
             .image-description {
@@ -443,9 +483,12 @@
                   font-size: 0.95rem;
                   color: #2c3e50;
                   line-height: 1.6;
-                  text-align: center;  /* 新增居中属性 */
-                  width: 100%;         /* 确保容器宽度与图片对齐 */
-                  box-sizing: border-box; /* 包含padding计算 */
+                  text-align: center;
+                  /* 新增居中属性 */
+                  width: 100%;
+                  /* 确保容器宽度与图片对齐 */
+                  box-sizing: border-box;
+                  /* 包含padding计算 */
             }
 
             /* 响应式调整 */
@@ -461,12 +504,12 @@
             }
 
             .Vs12Bd {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .S5d9Rd {
-                  background-color: rgba(243,178,42,1);
-                  color: rgba(33,33,33,1);
+                  background-color: rgba(243, 178, 42, 1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .O13XJf {
@@ -475,44 +518,44 @@
 
             .O13XJf .IFuOkc {
                   background-image: url(static/image/level-header.png);
-                  background-color: rgba(243,178,42,1);
+                  background-color: rgba(243, 178, 42, 1);
                   background-position-y: center;
             }
 
             .O13XJf .IFuOkc:before {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
                   opacity: 0.5;
                   display: block;
             }
 
             .O13XJf .zfr3Q {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .O13XJf .qnVSj {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .O13XJf .Glwbz {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .O13XJf .qLrapd {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .O13XJf .aHM7ed {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .O13XJf .NHD4Gf {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .O13XJf .QmpIrf {
-                  background-color: rgba(255,255,255,1);
-                  border-color: rgba(255,255,255,1);
-                  color: rgba(0,0,0,1);
+                  background-color: rgba(255, 255, 255, 1);
+                  border-color: rgba(255, 255, 255, 1);
+                  color: rgba(0, 0, 0, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
@@ -543,75 +586,75 @@
             }
 
             .Wew9ke {
-                  fill: rgba(255,255,255,1);
+                  fill: rgba(255, 255, 255, 1);
             }
 
             .fOU46b .YSH9J {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .fOU46b .KJll8d {
-                  background-color: rgba(255,255,255,1);
+                  background-color: rgba(255, 255, 255, 1);
             }
 
             .fOU46b .Mz8gvb {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .fOU46b .G8QRnc .Mz8gvb {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .G8QRnc .YSH9J {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .G8QRnc .iWs3gf.chg4Jd:focus {
-                  background-color: rgba(33,33,33,0.1199999973);
+                  background-color: rgba(33, 33, 33, 0.1199999973);
             }
 
             .fOU46b .G8QRnc .KJll8d {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .usN8rf .YSH9J {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .usN8rf .KJll8d {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .usN8rf .Mz8gvb {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .aCIEDd .YSH9J {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .aCIEDd .KJll8d {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .aCIEDd .Mz8gvb {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .a3ETed .YSH9J {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .a3ETed .KJll8d {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .a3ETed .M9vuGd {
-                  border-bottom-color: rgba(211,211,211,1);
+                  border-bottom-color: rgba(211, 211, 211, 1);
             }
 
             .fOU46b .a3ETed .Mz8gvb {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .fOU46b .zDUgLc {
@@ -629,117 +672,117 @@
 
             @media only screen and (min-width: 1280px) {
                   .XeSM4.b2Iqye.fOU46b .LBrwzc .tCHXDc {
-                        color: rgba(255,255,255,1);
+                        color: rgba(255, 255, 255, 1);
                   }
             }
 
             .XeSM4.b2Iqye.fOU46b .LBrwzc .iWs3gf.chg4Jd:focus {
-                  background-color: rgba(255,255,255,0.1199999973);
+                  background-color: rgba(255, 255, 255, 0.1199999973);
             }
 
             @media only screen and (min-width: 1280px) {
                   .KuNac.b2Iqye.fOU46b .GBy4H .tCHXDc {
-                        color: rgba(33,33,33,1);
+                        color: rgba(33, 33, 33, 1);
                   }
             }
 
             .KuNac.b2Iqye.fOU46b .GBy4H .iWs3gf.chg4Jd:focus {
-                  background-color: rgba(33,33,33,0.1199999973);
+                  background-color: rgba(33, 33, 33, 0.1199999973);
             }
 
             @media only screen and (min-width: 1280px) {
                   .KuNac.G9Qloe.fOU46b .GBy4H .tCHXDc {
-                        color: rgba(255,255,255,1);
+                        color: rgba(255, 255, 255, 1);
                   }
             }
 
             .KuNac.G9Qloe.fOU46b .GBy4H .iWs3gf.chg4Jd:focus {
-                  background-color: rgba(255,255,255,0.1199999973);
+                  background-color: rgba(255, 255, 255, 0.1199999973);
             }
 
             @media only screen and (min-width: 1280px) {
                   .XeSM4.G9Qloe.fOU46b .LBrwzc .tCHXDc {
-                        color: rgba(33,33,33,1);
+                        color: rgba(33, 33, 33, 1);
                   }
             }
 
             .XeSM4.G9Qloe.fOU46b .LBrwzc .iWs3gf.chg4Jd:focus {
-                  background-color: rgba(33,33,33,0.1199999973);
+                  background-color: rgba(33, 33, 33, 0.1199999973);
             }
 
             .LBrwzc .YSH9J {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .LBrwzc .oNsfjf {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .LBrwzc .KJll8d {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
             }
 
             .LBrwzc .YTv4We.chg4Jd:focus:before {
-                  border-color: rgba(33,33,33,1);
+                  border-color: rgba(33, 33, 33, 1);
                   display: block;
             }
 
             .LBrwzc .Mz8gvb {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .LBrwzc .wgxiMe {
-                  background-color: rgba(255,255,255,1);
+                  background-color: rgba(255, 255, 255, 1);
             }
 
             .LBrwzc .zDUgLc {
-                  border-bottom-color: rgba(204,204,204,1);
+                  border-bottom-color: rgba(204, 204, 204, 1);
                   border-bottom-width: 1px;
                   border-bottom-style: solid;
             }
 
             .GBy4H .wgxiMe {
-                  background-color: rgba(0,0,0,1);
+                  background-color: rgba(0, 0, 0, 1);
             }
 
             .JzO0Vc {
-                  background-color: rgba(79,71,78,1);
+                  background-color: rgba(79, 71, 78, 1);
             }
 
             .M63kCb {
-                  background-color: rgba(240,237,230,1);
+                  background-color: rgba(240, 237, 230, 1);
             }
 
             .zfr3Q {
                   font-family: 'Open Sans';
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
                   font-size: 13pt;
                   line-height: 1.55;
                   margin-top: 14px;
             }
 
             .qnVSj {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .Glwbz {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qLrapd {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .aHM7ed {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .NHD4Gf {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .zfr3Q .OUGEr {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .dhtgD {
@@ -750,27 +793,27 @@
             }
 
             .dhtgD:hover {
-                  border-bottom-color: rgba(243,178,42,1);
+                  border-bottom-color: rgba(243, 178, 42, 1);
                   border-bottom-style: solid;
                   border-bottom-width: 1px;
             }
 
             .lQAHbd .dhtgD:visited {
-                  border-bottom-color: rgba(240,237,230,1);
+                  border-bottom-color: rgba(240, 237, 230, 1);
             }
 
             .lQAHbd .dhtgD:hover {
-                  border-bottom-color: rgba(33,33,33,1);
+                  border-bottom-color: rgba(33, 33, 33, 1);
             }
 
             .dhtgD:active {
-                  border-bottom-color: rgba(243,178,42,1);
+                  border-bottom-color: rgba(243, 178, 42, 1);
                   border-bottom-style: solid;
                   border-bottom-width: 1px;
             }
 
             .dhtgD:visited {
-                  border-bottom-color: rgba(243,178,42,1);
+                  border-bottom-color: rgba(243, 178, 42, 1);
                   border-bottom-style: solid;
                   border-bottom-width: 1px;
             }
@@ -850,7 +893,7 @@
 
             .lhZOrc .hDrhEe {
                   border-bottom-width: 7px;
-                  border-bottom-color: rgba(243,178,42,1);
+                  border-bottom-color: rgba(243, 178, 42, 1);
                   border-bottom-style: solid;
             }
 
@@ -862,20 +905,20 @@
             }
 
             .zDUgLc {
-                  background-color: rgba(79,71,78,1);
+                  background-color: rgba(79, 71, 78, 1);
                   opacity: 1;
             }
 
             .baZpAe {
-                  background-color: rgba(255,255,255,1);
+                  background-color: rgba(255, 255, 255, 1);
             }
 
             .N0neUc {
-                  background-color: rgba(255,255,255,0);
+                  background-color: rgba(255, 255, 255, 0);
             }
 
             .ySLm4c {
-                  background-color: rgba(255,255,255,0);
+                  background-color: rgba(255, 255, 255, 0);
                   font-family: 'Open Sans';
             }
 
@@ -884,58 +927,58 @@
             }
 
             .OWlOyc {
-                  background-color: rgba(255,255,255,0);
+                  background-color: rgba(255, 255, 255, 0);
             }
 
             .iwQgFb {
-                  background-color: rgba(198,195,189,1);
+                  background-color: rgba(198, 195, 189, 1);
                   height: 3px;
                   margin-top: 8px;
             }
 
             .CbiMKe {
-                  background-color: rgba(243,178,42,1);
+                  background-color: rgba(243, 178, 42, 1);
             }
 
             .QmpIrf {
-                  background-color: rgba(243,178,42,1);
-                  border-color: rgba(243,178,42,1);
-                  color: rgba(33,33,33,1);
+                  background-color: rgba(243, 178, 42, 1);
+                  border-color: rgba(243, 178, 42, 1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .LRAOtb {
-                  background-color: rgba(255,255,255,1);
+                  background-color: rgba(255, 255, 255, 1);
             }
 
             .qeLZfd .zfr3Q {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .zfr3Q .OUGEr {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .qnVSj {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .Glwbz {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .qLrapd {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .aHM7ed {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .NHD4Gf {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .qeLZfd .LRAOtb {
@@ -947,40 +990,40 @@
             }
 
             .qeLZfd .iwQgFb {
-                  background-color: rgba(198,195,189,1);
+                  background-color: rgba(198, 195, 189, 1);
             }
 
             .lQAHbd:before {
-                  background-color: rgba(243,178,42,1);
+                  background-color: rgba(243, 178, 42, 1);
                   display: block;
             }
 
             .lQAHbd .zfr3Q {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .zfr3Q .OUGEr {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .qnVSj {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .Glwbz {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .qLrapd {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .aHM7ed {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .NHD4Gf {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
             }
 
             .lQAHbd .LRAOtb {
@@ -992,20 +1035,20 @@
             }
 
             .lQAHbd .iwQgFb {
-                  background-color: rgba(251,227,178,1);
+                  background-color: rgba(251, 227, 178, 1);
             }
 
             .lQAHbd .QmpIrf {
-                  background-color: rgba(255,255,255,1);
-                  border-color: rgba(255,255,255,1);
-                  color: rgba(0,0,0,1);
+                  background-color: rgba(255, 255, 255, 1);
+                  border-color: rgba(255, 255, 255, 1);
+                  color: rgba(0, 0, 0, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .lQAHbd .CbiMKe {
-                  background-color: rgba(255,255,255,1);
+                  background-color: rgba(255, 255, 255, 1);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1021,7 +1064,7 @@
             }
 
             .LB7kq .IFuOkc {
-                  border-bottom-color: rgba(243,178,42,1);
+                  border-bottom-color: rgba(243, 178, 42, 1);
                   border-bottom-width: 10px;
                   border-bottom-style: solid;
             }
@@ -1049,7 +1092,7 @@
             }
 
             .LB7kq.gk8rDe .zfr3Q {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1090,7 +1133,7 @@
             }
 
             .cJgDec .baZpAe .OUGEr {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .baZpAe .LRAOtb {
@@ -1098,39 +1141,39 @@
             }
 
             .cJgDec .zfr3Q {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .qnVSj {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .Glwbz {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .qLrapd {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .aHM7ed {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .NHD4Gf {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .cJgDec .IFuOkc:before {
-                  background-color: rgba(33,33,33,1);
+                  background-color: rgba(33, 33, 33, 1);
                   opacity: 0.5;
                   display: block;
             }
 
             .cJgDec .QmpIrf {
-                  background-color: rgba(255,255,255,1);
-                  border-color: rgba(255,255,255,1);
-                  color: rgba(0,0,0,1);
+                  background-color: rgba(255, 255, 255, 1);
+                  border-color: rgba(255, 255, 255, 1);
+                  color: rgba(0, 0, 0, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
@@ -1153,7 +1196,7 @@
             }
 
             .tpmmCb .baZpAe .OUGEr {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .baZpAe .LRAOtb {
@@ -1161,42 +1204,42 @@
             }
 
             .tpmmCb .zfr3Q {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .qnVSj {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .Glwbz {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .qLrapd {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .aHM7ed {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .NHD4Gf {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .IFuOkc:before {
-                  background-color: rgba(255,255,255,1);
+                  background-color: rgba(255, 255, 255, 1);
                   display: block;
             }
 
             .tpmmCb .Wew9ke {
-                  fill: rgba(0,0,0,1);
+                  fill: rgba(0, 0, 0, 1);
             }
 
             .tpmmCb .QmpIrf {
-                  background-color: rgba(255,255,255,1);
-                  border-color: rgba(255,255,255,1);
-                  color: rgba(0,0,0,1);
+                  background-color: rgba(255, 255, 255, 1);
+                  border-color: rgba(255, 255, 255, 1);
+                  color: rgba(0, 0, 0, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
@@ -1219,9 +1262,9 @@
             }
 
             .gk8rDe .QmpIrf {
-                  background-color: rgba(243,178,42,1);
-                  border-color: rgba(243,178,42,1);
-                  color: rgba(33,33,33,1);
+                  background-color: rgba(243, 178, 42, 1);
+                  border-color: rgba(243, 178, 42, 1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
@@ -1247,23 +1290,23 @@
             }
 
             .YSH9J {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .iWs3gf.chg4Jd:focus {
-                  background-color: rgba(255,255,255,0.1199999973);
+                  background-color: rgba(255, 255, 255, 0.1199999973);
             }
 
             .oNsfjf {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
             }
 
             .wgxiMe {
-                  background-color: rgba(79,71,78,1);
+                  background-color: rgba(79, 71, 78, 1);
             }
 
             .qV4dIc {
-                  border-bottom-color: rgba(255,255,255,0);
+                  border-bottom-color: rgba(255, 255, 255, 0);
                   border-bottom-style: solid;
                   border-bottom-width: 8px;
                   padding-top: 14px;
@@ -1283,11 +1326,11 @@
             }
 
             .M9vuGd {
-                  border-bottom-color: rgba(243,178,42,1);
+                  border-bottom-color: rgba(243, 178, 42, 1);
             }
 
             .eWDljc {
-                  background-color: rgba(79,71,78,1);
+                  background-color: rgba(79, 71, 78, 1);
                   padding-bottom: 28px;
             }
 
@@ -1399,53 +1442,53 @@
             }
 
             .xkUom {
-                  border-color: rgba(33,33,33,1);
-                  color: rgba(33,33,33,1);
+                  border-color: rgba(33, 33, 33, 1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .xkUom:hover {
-                  background-color: rgba(33,33,33,0.1000000015);
+                  background-color: rgba(33, 33, 33, 0.1000000015);
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .KjwKmc {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .KjwKmc:hover {
-                  background-color: rgba(33,33,33,0.1000000015);
+                  background-color: rgba(33, 33, 33, 0.1000000015);
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .lQAHbd .xkUom {
-                  border-color: rgba(33,33,33,1);
-                  color: rgba(33,33,33,1);
+                  border-color: rgba(33, 33, 33, 1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .lQAHbd .xkUom:hover {
-                  background-color: rgba(255,255,255,0.1000000015);
+                  background-color: rgba(255, 255, 255, 0.1000000015);
             }
 
             .lQAHbd .KjwKmc {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .lQAHbd .KjwKmc:hover {
-                  background-color: rgba(255,255,255,0.1000000015);
+                  background-color: rgba(255, 255, 255, 0.1000000015);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1473,30 +1516,30 @@
             }
 
             .lQAHbd .Mt0nFe {
-                  border-color: rgba(0,0,0,0.200000003);
+                  border-color: rgba(0, 0, 0, 0.200000003);
             }
 
             .cJgDec .xkUom {
-                  border-color: rgba(255,255,255,1);
-                  color: rgba(255,255,255,1);
+                  border-color: rgba(255, 255, 255, 1);
+                  color: rgba(255, 255, 255, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .cJgDec .xkUom:hover {
-                  background-color: rgba(255,255,255,0.1000000015);
+                  background-color: rgba(255, 255, 255, 0.1000000015);
             }
 
             .cJgDec .KjwKmc {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .cJgDec .KjwKmc:hover {
-                  background-color: rgba(255,255,255,0.1000000015);
+                  background-color: rgba(255, 255, 255, 0.1000000015);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1524,26 +1567,26 @@
             }
 
             .tpmmCb .xkUom {
-                  border-color: rgba(0,0,0,1);
-                  color: rgba(0,0,0,1);
+                  border-color: rgba(0, 0, 0, 1);
+                  color: rgba(0, 0, 0, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .tpmmCb .xkUom:hover {
-                  background-color: rgba(33,33,33,0.1000000015);
+                  background-color: rgba(33, 33, 33, 0.1000000015);
             }
 
             .tpmmCb .KjwKmc {
-                  color: rgba(0,0,0,1);
+                  color: rgba(0, 0, 0, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .tpmmCb .KjwKmc:hover {
-                  background-color: rgba(33,33,33,0.1000000015);
+                  background-color: rgba(33, 33, 33, 0.1000000015);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1571,26 +1614,26 @@
             }
 
             .gk8rDe .xkUom {
-                  border-color: rgba(33,33,33,1);
-                  color: rgba(33,33,33,1);
+                  border-color: rgba(33, 33, 33, 1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .gk8rDe .xkUom:hover {
-                  background-color: rgba(33,33,33,0.1000000015);
+                  background-color: rgba(33, 33, 33, 0.1000000015);
             }
 
             .gk8rDe .KjwKmc {
-                  color: rgba(33,33,33,1);
+                  color: rgba(33, 33, 33, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .gk8rDe .KjwKmc:hover {
-                  background-color: rgba(33,33,33,0.1000000015);
+                  background-color: rgba(33, 33, 33, 0.1000000015);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1618,26 +1661,26 @@
             }
 
             .O13XJf .xkUom {
-                  border-color: rgba(255,255,255,1);
-                  color: rgba(255,255,255,1);
+                  border-color: rgba(255, 255, 255, 1);
+                  color: rgba(255, 255, 255, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .O13XJf .xkUom:hover {
-                  background-color: rgba(255,255,255,0.1000000015);
+                  background-color: rgba(255, 255, 255, 0.1000000015);
             }
 
             .O13XJf .KjwKmc {
-                  color: rgba(255,255,255,1);
+                  color: rgba(255, 255, 255, 1);
                   font-family: 'Open Sans';
                   font-size: 13pt;
                   line-height: 22px;
             }
 
             .O13XJf .KjwKmc:hover {
-                  background-color: rgba(255,255,255,0.1000000015);
+                  background-color: rgba(255, 255, 255, 0.1000000015);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1670,7 +1713,7 @@
             }
 
             .CMArNe {
-                  background-color: rgba(240,237,230,1);
+                  background-color: rgba(240, 237, 230, 1);
             }
 
             @media only screen and (max-width: 479px) {
@@ -1840,7 +1883,7 @@
                   }
             }
             window.messages = [];
-            window.addEventListener && window.addEventListener('message', function(e) {
+            window.addEventListener && window.addEventListener('message', function (e) {
                   if (window.messages && e.data && e.data.magic == 'SHIC') {
                         window.messages.push(e);
                   }
@@ -1848,7 +1891,7 @@
       </script>
       <script src="static/js/client.js" nonce="jQx65DV8rSpimKkCFdcE0w"></script>
       <script nonce="jQx65DV8rSpimKkCFdcE0w">
-            (function() {}).call(this);
+            (function () { }).call(this);
       </script>
       <script nonce="jQx65DV8rSpimKkCFdcE0w">
             const imageUrl = 'https:\/\/lh5.googleusercontent.com\/CVDxSwlseyL6Uyk9ZLFte9dFzIrOqCSvSmt9l6ilqaYEGMCXsPVpdbYHVhg9J-93OE_e0luBPvXQPXzzp-kgbQ=w16383';
@@ -1872,561 +1915,929 @@
 </head>
 
 <body dir="ltr" itemscope itemtype="http://schema.org/WebPage" id="yDmH0d" css="yDmH0d">
-<div jscontroller="pc62j" jsmodel="iTeaXe" jsaction="rcuQ6b:WYd;GvneHb:og1FDd;vbaUQc:uAM5ec;">
-      <div jscontroller="X4BaPc" jsaction="rcuQ6b:WYd;o6xM5b:Pg9eo;HuL2Hd:mHeCvf;VMhF5:FFYy5e;sk3Qmb:HI1Mdd;JIbuQc:rSzFEd(z2EeY),aSaF6e(ilzYPe);">
-            <div jscontroller="o1L5Wb" data-sitename="mcgill-research-group" data-search-scope="1" data-universe="1" jsmodel="fNFZH" jsaction="Pe9H6d:cZFEp;O0t7nc:cC5KLb;WyADff:AQk9Jb;WMZaJ:VsGN3;hJluRd:UADL7b;zuqEgd:HI9w0;tr6QDd:Y8aXB;MxH79b:xDkBfb;JIbuQc:SPXMTb(uxAMZ),LjG1Ed(a6mxbb);"
-                 jsname="G0jgYd">
-                  <div jsname="gYwusb" class="p9b27"></div>
-                  <div jscontroller="RrXLpc" jsname="XeeWQc" role="banner" jsaction="keydown:uiKYid(OH0EC);rcuQ6b:WYd;zuqEgd:ufqpf;JIbuQc:XfTnxb(lfEfFf),AlTiYc(GeGHKb),AlTiYc(m1xNUe),zZlNMe(pZn8Oc);YqO5N:ELcyfe;">
-                        <div jsname="bF1uUb" class="BuY5Fd" jsaction="click:xVuwSc;"></div>
-                        <div jsname="MVsrn" class="TbNlJb ">
-                              <div role="button" class="U26fgb mUbCce fKz7Od h3nfre M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
-                                   jsshadow jsname="GeGHKb" aria-label="返回网站" aria-disabled="false" tabindex="0" data-tooltip="返回网站" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0">
-                                    <div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="V4YR2c" viewbox="0 0 24 24" focusable="false"><path d="M0 0h24v24H0z" fill="none"></path><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></span></span>
-                              </div>
-                              <div class="E2UJ5" jsname="M6JdT">
-                                    <div class="rFrNMe b7AJhc zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow jsname="OH0EC" aria-expanded="true">
-                                          <div class="aCsJod oJeWuf">
-                                                <div class="aXBtI I0VJ4d Wic03c"><span jsslot class="A37UZe qgcB3c iHd5yb"><div role="button" class="U26fgb mUbCce fKz7Od i3PoXe M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="lfEfFf" aria-label="搜索" aria-disabled="false" tabindex="0" data-tooltip="搜索" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="vu8Pwe" viewbox="0 0 24 24" focusable="false"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></span>
+      <div jscontroller="pc62j" jsmodel="iTeaXe" jsaction="rcuQ6b:WYd;GvneHb:og1FDd;vbaUQc:uAM5ec;">
+            <div jscontroller="X4BaPc"
+                  jsaction="rcuQ6b:WYd;o6xM5b:Pg9eo;HuL2Hd:mHeCvf;VMhF5:FFYy5e;sk3Qmb:HI1Mdd;JIbuQc:rSzFEd(z2EeY),aSaF6e(ilzYPe);">
+                  <div jscontroller="o1L5Wb" data-sitename="mcgill-research-group" data-search-scope="1"
+                        data-universe="1" jsmodel="fNFZH"
+                        jsaction="Pe9H6d:cZFEp;O0t7nc:cC5KLb;WyADff:AQk9Jb;WMZaJ:VsGN3;hJluRd:UADL7b;zuqEgd:HI9w0;tr6QDd:Y8aXB;MxH79b:xDkBfb;JIbuQc:SPXMTb(uxAMZ),LjG1Ed(a6mxbb);"
+                        jsname="G0jgYd">
+                        <div jsname="gYwusb" class="p9b27"></div>
+                        <div jscontroller="RrXLpc" jsname="XeeWQc" role="banner"
+                              jsaction="keydown:uiKYid(OH0EC);rcuQ6b:WYd;zuqEgd:ufqpf;JIbuQc:XfTnxb(lfEfFf),AlTiYc(GeGHKb),AlTiYc(m1xNUe),zZlNMe(pZn8Oc);YqO5N:ELcyfe;">
+                              <div jsname="bF1uUb" class="BuY5Fd" jsaction="click:xVuwSc;"></div>
+                              <div jsname="MVsrn" class="TbNlJb ">
+                                    <div role="button" class="U26fgb mUbCce fKz7Od h3nfre M9Bg4d" jscontroller="VXdfxd"
+                                          jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
+                                          jsshadow jsname="GeGHKb" aria-label="返回网站" aria-disabled="false" tabindex="0"
+                                          data-tooltip="返回网站" data-tooltip-vertical-offset="-12"
+                                          data-tooltip-horizontal-offset="0">
+                                          <div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot
+                                                class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg
+                                                            class="V4YR2c" viewbox="0 0 24 24" focusable="false">
+                                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path
+                                                                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z">
+                                                            </path>
+                                                      </svg></span></span>
                                     </div>
-                                    <div class="EmVfjc SKShhf" data-loadingmessage="正在加载…" jscontroller="qAKInc" jsaction="animationend:kWijWc;dyRcpb:dyRcpb" jsname="aZ2wEe">
-                                        <div class="Cg7hO" aria-live="assertive" jsname="vyyg5"></div>
-                                        <div jsname="Hxlbvc" class="xu46lf">
-                                            <div class="ir3uv uWlRce co39ub">
-                                                <div class="xq3j6 ERcjC">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="HBnAAc">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="xq3j6 dj3yTd">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                            </div>
-                                            <div class="ir3uv GFoASc Cn087">
-                                                <div class="xq3j6 ERcjC">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="HBnAAc">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="xq3j6 dj3yTd">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                            </div>
-                                            <div class="ir3uv WpeOqd hfsr6b">
-                                                <div class="xq3j6 ERcjC">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="HBnAAc">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="xq3j6 dj3yTd">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                            </div>
-                                            <div class="ir3uv rHV3jf EjXFBf">
-                                                <div class="xq3j6 ERcjC">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="HBnAAc">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                                <div class="xq3j6 dj3yTd">
-                                                    <div class="X6jHbb GOJTSe"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div role="button" class="U26fgb mUbCce fKz7Od JyJRXe M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
-                                         jsshadow jsname="m1xNUe" aria-label="返回网站" aria-disabled="false" tabindex="0" data-tooltip="返回网站" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0">
-                                        <div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="V4YR2c" viewbox="0 0 24 24" focusable="false"><path d="M0 0h24v24H0z" fill="none"></path><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></span></span>
-                                    </div>
-                                    </span>
-                                                      <div class="Xb9hP">
-                                                            <input type="search" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="搜索此网站" value="" aria-disabled="false" autofocus role="combobox" data-initial-value="">
-                                                            <div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">搜索此网站</div>
-                                                      </div><span jsslot class="A37UZe sxyYjd MQL3Ob"><div role="button" class="U26fgb mUbCce fKz7Od Kk06A M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="pZn8Oc" aria-label="清除搜索" aria-disabled="false" tabindex="0" data-tooltip="清除搜索" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="fAUEUd" viewbox="0 0 24 24" focusable="false"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></span>
-                                </div>
-                                </span>
-                                                      <div class="i9lrp mIZh1c"></div>
-                                                      <div jsname="XmnwAc" class="OabDMe cXrdqd"></div>
-                                                </div>
-                                          </div>
-                                          <div class="LXRPh">
-                                                <div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div>
-                                          </div>
-                                    </div>
-                                    <div class="InHK7" jsname="aN0umc">
-                                          <div class="GG9xTc" jsaction="click:wTqBkf;" jsname="e7EaC" tabindex="0" aria-label="嵌入的文件">
-                                                <svg class="vu8Pwe KYLCw" viewbox="0 0 24 24" focusable="false">
-                                                      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                                                      <path d="M0 0h24v24H0z" fill="none"></path>
-                                                </svg><span class="HCIIgf">嵌入的文件</span>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-            <div jsname="tiN4bf">
-                  <style nonce="sEKFvbvz0Neo-03-LtTwPg">
-                        .rrJNTc {
-                              opacity: 0;
-                        }
-
-                        .bKy5e {
-                              pointer-events: none;
-                              position: absolute;
-                              top: 0;
-                        }
-                  </style>
-                  <div class="bKy5e">
-                        <div class="rrJNTc" tabindex="-1">
-                              <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper='true'>
-                                    <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 WsSUlf jz7fPb" jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;"
-                                            data-idom-class="LjDxcd XhPA0b LQeN7 WsSUlf jz7fPb" jsname="z2EeY" tabindex="0">
-                                          <div class="VfPpkd-Jh9lGc"></div>
-                                          <div class="VfPpkd-J1Ukfc-LhBDec"></div>
-                                          <div class="VfPpkd-RLmnJb"></div><span jsname="V67aGc" class="VfPpkd-vQzf8d">跳至主要内容</span>
-                                    </button>
-                              </div>
-                              <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper='true'>
-                                    <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 WsSUlf br90J" jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;"
-                                            data-idom-class="LjDxcd XhPA0b LQeN7 WsSUlf br90J" jsname="ilzYPe" tabindex="0">
-                                          <div class="VfPpkd-Jh9lGc"></div>
-                                          <div class="VfPpkd-J1Ukfc-LhBDec"></div>
-                                          <div class="VfPpkd-RLmnJb"></div><span jsname="V67aGc" class="VfPpkd-vQzf8d">调至导航栏</span>
-                                    </button>
-                              </div>
-                        </div>
-                  </div>
-                  <div class="M63kCb N63NQ"></div>
-                  <div class="QZ3zWd">
-                        <div class="fktJzd AKpWA fOU46b yMcSQd Ly6Unf G9Qloe XeSM4 XxIgdb" jsname="UzWXSb" data-uses-custom-theme="false" data-legacy-theme-name="Level" data-legacy-theme-font-kit="Narrow" data-legacy-theme-color-kit="Custom" jscontroller="Md9ENb" jsaction="gsiSmd:Ffcznf;yj5fUd:cpPetb;HNXL3:q0Vyke;e2SXKd:IPDu5e;BdXpgd:nhk7K;rcuQ6b:WYd;">
-                              <header id="atIdViewHeader">
-                                    <div style="position:fixed; width: 100%; z-index: 100;">
-                                          <div id="docs-banner-container">
-                                                <div id="docs-banners">
-                                                      <div id="HB1eCd-mzNpsf-r8s4j-ORHb"></div>
-                                                      <div id="HB1eCd-TZk80d-r8s4j-ORHb" aria-live="assertive" aria-atomic="true"></div>
-                                                </div>
-                                                <div class="HB1eCd-Vkfede-NBtyUd-PvRhvb-LwH6nd"></div>
-                                          </div>
-                                    </div>
-                                    <div class="BbxBP HP6J1d K5Zlne" jsname="WA9qLc" jscontroller="RQOkef" jsaction="rcuQ6b:JdcaS;MxH79b:JdcaS;VbOlFf:ywL4Jf;FaOgy:ywL4Jf; keydown:Hq2uPe; wheel:Ut4Ahc;" data-top-navigation="true" data-is-preview="false">
-                                          <div class="DXsoRd YTv4We oNsfjf" role="button" tabindex="0" jsaction="click:LUvzV" jsname="z4Tpl" id="s9iPrd" aria-haspopup="true" aria-controls="yuynLe" aria-expanded="false">
-                                                <svg class="wFCWne" viewbox="0 0 24 24" stroke="currentColor" jsname="B1n9ub" focusable="false">
-                                                      <g transform="translate(12,12)">
-                                                            <path class="hlJH0" d="M-9 -5 L9 -5" fill="none" stroke-width="2"></path>
-                                                            <path class="HBu6N" d="M-9 0 L9 0" fill="none" stroke-width="2"></path>
-                                                            <path class="cLAGQe" d="M-9 5 L9 5" fill="none" stroke-width="2"></path>
-                                                      </g>
-                                                </svg>
-                                          </div>
-                                          <nav id="mainNav">
-                                                <ul class="nav-list">
-                                                      <li><a href="about.html" class="nav-link">About</a></li>
-                                                      <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                                                      <li><a href="publications.html" class="nav-link">Publications</a></li>
-                                                      <li><a href="activities.html" class="nav-link">Activities</a></li>
-                                                      <li><a href="contact.html" class="nav-link">Contact</a></li>
-                                                </ul>
-                                          </nav>
-                                          <div class="VLoccc K5Zlne QDWEj U8eYrb" jsname="rtFGi">
-                                                <div class="Pvc6xe">
-                                                      <div jsname="I8J07e" class="TlfmSc YSH9J"><a class="GAuSPc" jsname="jIujaf" href="about.html"><span class="QTKDff">Data Intelligence Group</span></a>
-                                                      </div>
-                                                      <nav class="plFg0c" jscontroller="HXO1uc" jsaction="rcuQ6b:rcuQ6b;MxH79b:CfS0pe;" id="WDxLfe" data-is-preview="false" style="visibility: hidden;" role="navigation" tabindex="-1">
-                                                            <ul jsname="waIgnc" class="K1Ci7d oXBWEc jYxBte">
-                                                                  <li jsname="ibnC6b" data-nav-level="1" class="VsJjtf">
-                                                                        <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
-                                                                              <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb dk90Ob jgXgSe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="about.html" data-url="/about" data-type="1" data-level="1">About</a>
-                                                                              </div>
-                                                                        </div>
-                                                                        <div class="rgLkl"></div>
-                                                                  </li>
-                                                                  <li jsname="ibnC6b" data-nav-level="1" class="VsJjtf">
-                                                                        <div class="PsKE7e qV4dIc Qrrb5 YSH9J M9vuGd" aria-current="true">
-                                                                              <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb dk90Ob jgXgSe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" aria-selected="true" href="" data-url="/projects" data-type="1"
-                                                                                                                                                            data-level="1">Projects</a>
-                                                                              </div>
-                                                                        </div>
-                                                                        <div class="rgLkl"></div>
-                                                                  </li>
-                                                                  <li jsname="ibnC6b" data-nav-level="1" class="VsJjtf">
-                                                                        <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
-                                                                              <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb dk90Ob jgXgSe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="publications.html" data-url="/publications" data-type="1"
-                                                                                                                                                            data-level="1">Publications</a>
-                                                                              </div>
-                                                                        </div>
-                                                                        <div class="rgLkl"></div>
-                                                                  </li>
-                                                                  <li jsname="ibnC6b" data-nav-level="1" class="VsJjtf">
-                                                                        <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
-                                                                              <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb dk90Ob jgXgSe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="activities.html" data-url="/opportunities" data-type="1"
-                                                                                                                                                            data-level="1">Opportunities</a>
-                                                                              </div>
-                                                                        </div>
-                                                                        <div class="rgLkl"></div>
-                                                                  </li>
-                                                                  <li jsname="ibnC6b" data-nav-level="1" class="VsJjtf">
-                                                                        <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
-                                                                              <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb dk90Ob jgXgSe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="contact.html" data-url="/contact" data-type="1" data-level="1">Contact</a>
-                                                                              </div>
-                                                                        </div>
-                                                                        <div class="rgLkl"></div>
-                                                                  </li>
-                                                                  <li jsname="ibnC6b" data-nav-level="1" class="VsJjtf ZmrVpf oXBWEc" more-menu-item jsaction="mouseenter:Vx8Jlb; mouseleave:ysDRUd">
-                                                                        <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
-                                                                              <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb dk90Ob jgXgSe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" aria-expanded="false" aria-haspopup="true" data-level="1">更多</a>
-                                                                                    <div
-                                                                                            class="mBHtvb u5fiyc" role="presentation" title="展开/收起" jsaction="click:oESVTe" jsname="ix0Hvc">
-                                                                                          <svg class="dvmRw" viewbox="0 0 24 24" stroke="currentColor" jsname="HIH2V" focusable="false">
-                                                                                                <g transform="translate(9.7,12) rotate(45)">
-                                                                                                      <path class="K4B8Y" d="M-4.2 0 L4.2 0" stroke-width="2"></path>
-                                                                                                </g>
-                                                                                                <g transform="translate(14.3,12) rotate(-45)">
-                                                                                                      <path class="MrYMx" d="M-4.2 0 L4.2 0" stroke-width="2"></path>
-                                                                                                </g>
-                                                                                          </svg>
+                                    <div class="E2UJ5" jsname="M6JdT">
+                                          <div class="rFrNMe b7AJhc zKHdkd" jscontroller="pxq3x"
+                                                jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV"
+                                                jsshadow jsname="OH0EC" aria-expanded="true">
+                                                <div class="aCsJod oJeWuf">
+                                                      <div class="aXBtI I0VJ4d Wic03c"><span jsslot
+                                                                  class="A37UZe qgcB3c iHd5yb">
+                                                                  <div role="button"
+                                                                        class="U26fgb mUbCce fKz7Od i3PoXe M9Bg4d"
+                                                                        jscontroller="VXdfxd"
+                                                                        jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
+                                                                        jsshadow jsname="lfEfFf" aria-label="搜索"
+                                                                        aria-disabled="false" tabindex="0"
+                                                                        data-tooltip="搜索"
+                                                                        data-tooltip-vertical-offset="-12"
+                                                                        data-tooltip-horizontal-offset="0">
+                                                                        <div class="VTBa7b MbhUzd" jsname="ksKsZd">
+                                                                        </div><span jsslot class="xjKiLb"><span
+                                                                                    class="Ce1Y1c"
+                                                                                    style="top: -12px"><svg
+                                                                                          class="vu8Pwe"
+                                                                                          viewbox="0 0 24 24"
+                                                                                          focusable="false">
+                                                                                          <path
+                                                                                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                                                                          </path>
+                                                                                          <path d="M0 0h24v24H0z"
+                                                                                                fill="none"></path>
+                                                                                    </svg></span></span>
+                                                                  </div>
+                                                                  <div class="EmVfjc SKShhf" data-loadingmessage="正在加载…"
+                                                                        jscontroller="qAKInc"
+                                                                        jsaction="animationend:kWijWc;dyRcpb:dyRcpb"
+                                                                        jsname="aZ2wEe">
+                                                                        <div class="Cg7hO" aria-live="assertive"
+                                                                              jsname="vyyg5"></div>
+                                                                        <div jsname="Hxlbvc" class="xu46lf">
+                                                                              <div class="ir3uv uWlRce co39ub">
+                                                                                    <div class="xq3j6 ERcjC">
+                                                                                          <div class="X6jHbb GOJTSe">
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div class="HBnAAc">
+                                                                                          <div class="X6jHbb GOJTSe">
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div class="xq3j6 dj3yTd">
+                                                                                          <div class="X6jHbb GOJTSe">
+                                                                                          </div>
                                                                                     </div>
                                                                               </div>
-                                                                        </div>
-                                                                        <div class="oGuwee eWDljc RPRy1e Mkt3Tc" style="display:none;" jsname="QXE97" jsaction="transitionend:SJBdh" role="group">
-                                                                              <ul class="VcS63b">
-                                                                                    <li jsname="ibnC6b" data-nav-level="2" class="ijMPi ZmrVpf" in-more-item>
-                                                                                          <div class="PsKE7e IKA38e oNsfjf">
-                                                                                                <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb hDrhEe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="about.html" data-url="/about" data-type="1" data-in-more-submenu="true"
-                                                                                                                                                                              data-level="2">About</a>
-                                                                                                </div>
+                                                                              <div class="ir3uv GFoASc Cn087">
+                                                                                    <div class="xq3j6 ERcjC">
+                                                                                          <div class="X6jHbb GOJTSe">
                                                                                           </div>
-                                                                                    </li>
-                                                                                    <li jsname="ibnC6b" data-nav-level="2" class="ijMPi ZmrVpf" in-more-item>
-                                                                                          <div class="PsKE7e IKA38e oNsfjf lhZOrc" aria-current="true">
-                                                                                                <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb hDrhEe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" aria-selected="true" href="" data-url="/projects" data-type="1" data-in-more-submenu="true"
-                                                                                                                                                                              data-level="2">Projects</a>
-                                                                                                </div>
+                                                                                    </div>
+                                                                                    <div class="HBnAAc">
+                                                                                          <div class="X6jHbb GOJTSe">
                                                                                           </div>
-                                                                                    </li>
-                                                                                    <li jsname="ibnC6b" data-nav-level="2" class="ijMPi ZmrVpf" in-more-item>
-                                                                                          <div class="PsKE7e IKA38e oNsfjf">
-                                                                                                <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb hDrhEe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="publications.html" data-url="/publications" data-type="1" data-in-more-submenu="true"
-                                                                                                                                                                              data-level="2">Publications</a>
-                                                                                                </div>
+                                                                                    </div>
+                                                                                    <div class="xq3j6 dj3yTd">
+                                                                                          <div class="X6jHbb GOJTSe">
                                                                                           </div>
-                                                                                    </li>
-                                                                                    <li jsname="ibnC6b" data-nav-level="2" class="ijMPi ZmrVpf" in-more-item>
-                                                                                          <div class="PsKE7e IKA38e oNsfjf">
-                                                                                                <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb hDrhEe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="activities.html" data-url="/opportunities" data-type="1" data-in-more-submenu="true"
-                                                                                                                                                                              data-level="2">Opportunities</a>
-                                                                                                </div>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="ir3uv WpeOqd hfsr6b">
+                                                                                    <div class="xq3j6 ERcjC">
+                                                                                          <div class="X6jHbb GOJTSe">
                                                                                           </div>
-                                                                                    </li>
-                                                                                    <li jsname="ibnC6b" data-nav-level="2" class="ijMPi ZmrVpf" in-more-item>
-                                                                                          <div class="PsKE7e IKA38e oNsfjf">
-                                                                                                <div class="I35ICb" jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);"><a class="aJHbb hDrhEe HlqNPb" jscontroller="yUHiM" jsaction="rcuQ6b:WYd;" jsname="QwLHlb" role="link" tabindex="0" data-navtype="1" href="contact.html" data-url="/contact" data-type="1" data-in-more-submenu="true"
-                                                                                                                                                                              data-level="2">Contact</a>
-                                                                                                </div>
+                                                                                    </div>
+                                                                                    <div class="HBnAAc">
+                                                                                          <div class="X6jHbb GOJTSe">
                                                                                           </div>
-                                                                                    </li>
-                                                                              </ul>
-                                                                        </div>
-                                                                  </li>
-                                                            </ul>
-                                                      </nav>
-                                                      <div jscontroller="gK4msf" class="RBEWZc" jsname="h04Zod" jsaction="rcuQ6b:WYd;JIbuQc:AT95Ub;VbOlFf:HgE5D;FaOgy:HgE5D;MxH79b:JdcaS;" data-side-navigation="false">
-                                                            <div role="button" class="U26fgb mUbCce fKz7Od iWs3gf Wdnjke M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
-                                                                 jsshadow jsname="R9oOZd" aria-label="打开搜索栏" aria-disabled="false" tabindex="0" data-tooltip="打开搜索栏" aria-expanded="false" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0">
-                                                                  <div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="vu8Pwe tCHXDc YSH9J" viewbox="0 0 24 24" focusable="false"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></span>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div jsname="mADGA" class="zDUgLc"></div>
-                                          </div>
-                                          <div class="TxnWlb" jsname="BDdyze" jsaction="click:LUvzV"></div>
-                                    </div>
-                              </header>
-                              <div role="main" tabindex="-1" class="UtePc RCETm" dir="ltr">
-                                    <section id="h.56d902a15b87d83e_1" class="yaqOZd LB7kq cJgDec nyKByd O13XJf" style="">
-                                          <div class="Nu95r">
-                                                <div class="IFuOkc" style="background-position: center center; background-image: url(static/image/P78C23F815VUkrnMxWVICHLsxys5Vo-eUbMnZSBBDulu7ea47P-TVtJQRoRRJGHeXpI3IuQ-58e-u69zGQwoFo4=w16383.jpg); background-size: cover;" jsname="LQX2Vd"></div>
-                                          </div>
-                                          <div class="mYVXT">
-                                                <div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1">
-                                                      <div class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP">
-                                                            <div class="JNdkSc-SmKAyb LkDMRd">
-                                                                  <div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc">
-                                                            <div class="JNdkSc-SmKAyb LkDMRd">
-                                                                  <div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId">
-                                                                        <div class="oKdM2c ZZyype Kzv0Me">
-                                                                              <div id="h.56d902a15b87d83e_4" class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb">
-                                                                                    <div class="jXK9ad-SmKAyb">
-                                                                                          <div class="tyJCtd mGzaTb Depvyb baZpAe lkHyyc">
-                                                                                                <h1 id="h.gje0dvhjrf5v" dir="ltr" class="zfr3Q duRjpb CDt4Ke " style="text-align: center;"><span class="C9DxTc " style="">Projects</span></h1>
+                                                                                    </div>
+                                                                                    <div class="xq3j6 dj3yTd">
+                                                                                          <div class="X6jHbb GOJTSe">
+                                                                                          </div>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="ir3uv rHV3jf EjXFBf">
+                                                                                    <div class="xq3j6 ERcjC">
+                                                                                          <div class="X6jHbb GOJTSe">
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div class="HBnAAc">
+                                                                                          <div class="X6jHbb GOJTSe">
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div class="xq3j6 dj3yTd">
+                                                                                          <div class="X6jHbb GOJTSe">
                                                                                           </div>
                                                                                     </div>
                                                                               </div>
                                                                         </div>
                                                                   </div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP">
-                                                            <div class="JNdkSc-SmKAyb LkDMRd">
-                                                                  <div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div>
-                                                            </div>
+                                                                  <div role="button"
+                                                                        class="U26fgb mUbCce fKz7Od JyJRXe M9Bg4d"
+                                                                        jscontroller="VXdfxd"
+                                                                        jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
+                                                                        jsshadow jsname="m1xNUe" aria-label="返回网站"
+                                                                        aria-disabled="false" tabindex="0"
+                                                                        data-tooltip="返回网站"
+                                                                        data-tooltip-vertical-offset="-12"
+                                                                        data-tooltip-horizontal-offset="0">
+                                                                        <div class="VTBa7b MbhUzd" jsname="ksKsZd">
+                                                                        </div><span jsslot class="xjKiLb"><span
+                                                                                    class="Ce1Y1c"
+                                                                                    style="top: -12px"><svg
+                                                                                          class="V4YR2c"
+                                                                                          viewbox="0 0 24 24"
+                                                                                          focusable="false">
+                                                                                          <path d="M0 0h24v24H0z"
+                                                                                                fill="none"></path>
+                                                                                          <path
+                                                                                                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z">
+                                                                                          </path>
+                                                                                    </svg></span></span>
+                                                                  </div>
+                                                            </span>
+                                                            <div class="Xb9hP">
+                                                                  <input type="search" class="whsOnd zHQkBf"
+                                                                        jsname="YPqjbf" autocomplete="off" tabindex="0"
+                                                                        aria-label="搜索此网站" value=""
+                                                                        aria-disabled="false" autofocus role="combobox"
+                                                                        data-initial-value="">
+                                                                  <div jsname="LwH6nd" class="ndJi5d snByac"
+                                                                        aria-hidden="true">搜索此网站</div>
+                                                            </div><span jsslot class="A37UZe sxyYjd MQL3Ob">
+                                                                  <div role="button"
+                                                                        class="U26fgb mUbCce fKz7Od Kk06A M9Bg4d"
+                                                                        jscontroller="VXdfxd"
+                                                                        jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
+                                                                        jsshadow jsname="pZn8Oc" aria-label="清除搜索"
+                                                                        aria-disabled="false" tabindex="0"
+                                                                        data-tooltip="清除搜索"
+                                                                        data-tooltip-vertical-offset="-12"
+                                                                        data-tooltip-horizontal-offset="0">
+                                                                        <div class="VTBa7b MbhUzd" jsname="ksKsZd">
+                                                                        </div><span jsslot class="xjKiLb"><span
+                                                                                    class="Ce1Y1c"
+                                                                                    style="top: -12px"><svg
+                                                                                          class="fAUEUd"
+                                                                                          viewbox="0 0 24 24"
+                                                                                          focusable="false">
+                                                                                          <path
+                                                                                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                                                                                          </path>
+                                                                                          <path d="M0 0h24v24H0z"
+                                                                                                fill="none"></path>
+                                                                                    </svg></span></span>
+                                                                  </div>
+                                                            </span>
+                                                            <div class="i9lrp mIZh1c"></div>
+                                                            <div jsname="XmnwAc" class="OabDMe cXrdqd"></div>
                                                       </div>
                                                 </div>
+                                                <div class="LXRPh">
+                                                      <div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div>
+                                                </div>
                                           </div>
-                                    </section>
+                                          <div class="InHK7" jsname="aN0umc">
+                                                <div class="GG9xTc" jsaction="click:wTqBkf;" jsname="e7EaC" tabindex="0"
+                                                      aria-label="嵌入的文件">
+                                                      <svg class="vu8Pwe KYLCw" viewbox="0 0 24 24" focusable="false">
+                                                            <path
+                                                                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                                            </path>
+                                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                                      </svg><span class="HCIIgf">嵌入的文件</span>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
-                              <div class="research-container">
-                                    <!-- 交通大数据 -->
-                                    <section>
-                                          <h2 class="section-title">大数据处理及应用：</h2>
-                                                <h3>1. 交通数据分析及应用</h3>
-                                                <div class="research-text">
-                                                      <p>
-                                                            公共交通（地铁、公交）具有集约高效、节能环保等优点，发展公共交通是缓解交通拥堵、减少碳排放、改善环境质量的重要手段。相对于出租车/私人汽车，<span class="highlight">公共交通的使用受到行驶速度慢、旅行/等待时间不可靠、最后一公里交通等问题的制约</span>。 围绕提升公共交通服务质量、促进公共交通使用率进而缓解交通拥堵的目的，研究交通数据分析及其在交通优化中的应用，主要包括：城市交通网络中交通状态预测、拥堵状态的传播行为建模及其在交通预测中的应用、行人/车辆轨迹数据分析，个性化最优出行路线规划，多模态公共交通系统建模与优化等。
-                                                      </p>
+                        </div>
+                  </div>
+                  <div jsname="tiN4bf">
+                        <style nonce="sEKFvbvz0Neo-03-LtTwPg">
+                              .rrJNTc {
+                                    opacity: 0;
+                              }
 
-                                                      <div class="research-gallery">
-                                                            <!-- 拥堵传播模型 -->
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/ce.png"
-                                                                       alt="交通拥堵传播模型"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>交通拥堵传播行为的建模及预测问题</strong>
-                                                                  </div>
-                                                            </div>
-
-                                                            <!-- 最后一公里优化 -->
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/dabs.png"
-                                                                       alt="最后一公里交通优化"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>最后一公里交通优化问题</strong>
-                                                                  </div>
-                                                            </div>
-
-                                                            <!-- 多模态出行规划 -->
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/pjp.png"
-                                                                       alt="多模态出行规划"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>多模态交通网络上个性化出行方案规划问题</strong>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-
-                                                      <h3>2. 海洋船舶轨迹数据分析</h3>
-                                                      <div class="research-text">
-                                                            <p>
-                                                                  包括船舶轨迹数据增强、轨迹预测、基于船舶轨迹数据的捕鱼行为分析等问题。
-                                                            </p>
-
-                                                            <div class="research-gallery">
-                                                                  <!-- 海洋船舶 -->
-                                                                  <div class="research-item">
-                                                                        <img src="static/image/research/ocean.png"
-                                                                             alt="基于船舶轨迹数据的捕鱼行为分析"
-                                                                             class="research-image">
-                                                                        <div class="image-description">
-                                                                              <strong>基于船舶轨迹数据的捕鱼行为分析</strong>
-                                                                        </div>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          <h2 class="section-title">开源软件代码分析及其在漏洞检测、风险评估中的应用：</h2>
-                                                <h3>1. 基于深度学习的代码表征问题</h3>
-                                                <div class="research-text">
-                                                      <p>
-                                                            利用深度学习来检测软件代码的安全问题是近年来研究和实践的热点之一。随着软件复杂度的提高和安全威胁的日益增加，传统的基于规则的安全漏洞检测方法越来越难以应对新的挑战。深度学习以其强大的特征提取能力，在理解复杂代码结构和模式方面显示出巨大潜力，为软件安全检测提供了新的解决方案。
-                                                      </p>
-
-                                                <div class="research-gallery">
-                                                      <div class="research-gallery">
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/code.png"
-                                                                       alt="源码视角"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>代码文本视角</strong>
-                                                                  </div>
-                                                            </div>
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/cfg.png"
-                                                                       alt="cfg"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>程序控制流图视角</strong>
-                                                                  </div>
-                                                            </div>
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/pdg.png"
-                                                                       alt="pdg"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>程序依赖图视角</strong>
-                                                                  </div>
-                                                            </div>
-                                                            <div class="image-description">
-                                                                  <strong>多视角软件代码分析</strong>
-                                                            </div>
-                                                      </div>
-                                                </div>
-
-                                                <h3>2. 软件漏洞检测及其风险评估问题 </h3>
-                                                <div class="research-text">
-                                                      <p>
-                                                            基于CVE/CWE等安全漏洞数据库，检测开源软件中是否存在相同或类似的软件漏洞；对软件代码中存在的安全漏洞进行风险评估，并研究软件漏洞的修复策略
-                                                      </p>
-
-                                                      <div class="research-gallery">
-                                                            <!-- 海洋船舶 -->
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/safe.png"
-                                                                       alt="软件漏洞检测流程"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>软件漏洞检测流程</strong>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                </div>
-
-                                                <h3>3. C/C++生态中第三方库依赖关系分析 </h3>
-                                                <div class="research-text">
-                                                      <div class="research-gallery">
-                                                            <!-- 海洋船舶 -->
-                                                            <div class="research-item">
-                                                                  <img src="static/image/research/3pld.png"
-                                                                       alt="构建 C/C++ 生态中第三方依赖关系图"
-                                                                       class="research-image">
-                                                                  <div class="image-description">
-                                                                        <strong>构建 C/C++ 生态中第三方依赖关系图</strong>
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </section>
-
-                                    <section>
-                                          <h2 class="section-title">AI& Security</h2>
-                                          <div class="research-text">
-                                                <h3>1. 图攻击</h3>
-                                                <p>
-                                                      图对抗攻击是指攻击者通过对输入的图进行微小的修改，以使得机器学习模型做出错误的判断。这些修改可能对人类来说几乎不可察觉，但却足以欺骗计算机系统（例如推荐系统，社交网络等）。
-                                                </p>
-                                                <div class="research-gallery">
-                                                      <div class="research-item">
-                                                            <img src="static/image/research/graph_attack.png"
-                                                                 alt="Adversarial Attack on Graph"
-                                                                 class="research-image">
-                                                            <div class="image-description">
-                                                                  <strong>图对抗攻击</strong>
-                                                            </div>
-                                                      </div>
-                                                </div>
-
-                                                <h3>2. 强化学习</h3>
-                                                <p>
-                                                      强化学习作为一种模仿人类学习行为的机器学习方法，对于实现智能决策和自主学习具有重要意义。课题组研究如何在复杂环境中实现智能体的高效决策、如何平衡探索与利用的关系、如何处理延迟奖励等挑战。还涉及如何将深度学习与强化学习相结合，以解决高维状态空间下的决策问题，以及如何应对现实环境中的不确定性和噪声。
-                                                </p>
-                                                <div class="research-gallery">
-                                                      <div class="research-item">
-                                                            <img src="static/image/research/tsp20before.jpg"
-                                                                 alt="未经训练的2-opt算法得到的路径"
-                                                                 class="research-image">
-                                                            <div class="image-description">
-                                                                  <strong>未经训练的2-opt算法得到的路径</strong>
-                                                            </div>
-                                                      </div>
-                                                      <div class="research-item">
-                                                            <img src="static/image/research/tsp20after.jpg"
-                                                                 alt="训练之后的2-opt算法得到的路径"
-                                                                 class="research-image">
-                                                            <div class="image-description">
-                                                                  <strong>训练之后的2-opt算法得到的路径</strong>
-                                                            </div>
-                                                      </div>
-                                                      <div class="research-item">
-                                                            <img src="static/image/research/tsp.jpg"
-                                                                 alt="Improvement Heuristic基本流程"
-                                                                 class="research-image">
-                                                            <div class="image-description">
-                                                                  <strong>Improvement Heuristic基本流程</strong>
-                                                            </div>
-                                                      </div>
-
-                                                </div>
-                                          </div>
-                                    </section>
-
+                              .bKy5e {
+                                    pointer-events: none;
+                                    position: absolute;
+                                    top: 0;
+                              }
+                        </style>
+                        <div class="bKy5e">
+                              <div class="rrJNTc" tabindex="-1">
+                                    <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper='true'>
+                                          <button
+                                                class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 WsSUlf jz7fPb"
+                                                jscontroller="soHxf"
+                                                jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;"
+                                                data-idom-class="LjDxcd XhPA0b LQeN7 WsSUlf jz7fPb" jsname="z2EeY"
+                                                tabindex="0">
+                                                <div class="VfPpkd-Jh9lGc"></div>
+                                                <div class="VfPpkd-J1Ukfc-LhBDec"></div>
+                                                <div class="VfPpkd-RLmnJb"></div><span jsname="V67aGc"
+                                                      class="VfPpkd-vQzf8d">跳至主要内容</span>
+                                          </button>
+                                    </div>
+                                    <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper='true'>
+                                          <button
+                                                class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 WsSUlf br90J"
+                                                jscontroller="soHxf"
+                                                jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;"
+                                                data-idom-class="LjDxcd XhPA0b LQeN7 WsSUlf br90J" jsname="ilzYPe"
+                                                tabindex="0">
+                                                <div class="VfPpkd-Jh9lGc"></div>
+                                                <div class="VfPpkd-J1Ukfc-LhBDec"></div>
+                                                <div class="VfPpkd-RLmnJb"></div><span jsname="V67aGc"
+                                                      class="VfPpkd-vQzf8d">调至导航栏</span>
+                                          </button>
+                                    </div>
                               </div>
-                              <div class="Xpil1b xgQ6eb"></div>
-                              <footer jsname="yePe5c">
-                                    <section id="h.56d902a15b87d83e_107" class="yaqOZd qeLZfd">
-                                          <div class="IFuOkc"></div>
-                                          <div class="mYVXT">
-                                                <div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1">
-                                                      <div class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb JNdkSc SQVYQc yYI8W HQwdzb">
-                                                            <div class="JNdkSc-SmKAyb LkDMRd">
-                                                                  <div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId">
-                                                                        <div class="oKdM2c ZZyype Kzv0Me">
-                                                                              <div id="h.56d902a15b87d83e_104" class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb">
-                                                                                    <div class="jXK9ad-SmKAyb">
-                                                                                          <div class="tyJCtd baZpAe">
-                                                                                                <a href="https://it.ouc.edu.cn/"
-                                                                                                   target="_blank" class="fqo2vd">
-                                                                                                      <div class="t3iYD">
-                                                                                                            <img src="static/image/ouc-removebg-preview.png"
-                                                                                                                 class="CENy8b">
+                        </div>
+                        <div class="M63kCb N63NQ"></div>
+                        <div class="QZ3zWd">
+                              <div class="fktJzd AKpWA fOU46b yMcSQd Ly6Unf G9Qloe XeSM4 XxIgdb" jsname="UzWXSb"
+                                    data-uses-custom-theme="false" data-legacy-theme-name="Level"
+                                    data-legacy-theme-font-kit="Narrow" data-legacy-theme-color-kit="Custom"
+                                    jscontroller="Md9ENb"
+                                    jsaction="gsiSmd:Ffcznf;yj5fUd:cpPetb;HNXL3:q0Vyke;e2SXKd:IPDu5e;BdXpgd:nhk7K;rcuQ6b:WYd;">
+                                    <header id="atIdViewHeader">
+                                          <div style="position:fixed; width: 100%; z-index: 100;">
+                                                <div id="docs-banner-container">
+                                                      <div id="docs-banners">
+                                                            <div id="HB1eCd-mzNpsf-r8s4j-ORHb"></div>
+                                                            <div id="HB1eCd-TZk80d-r8s4j-ORHb" aria-live="assertive"
+                                                                  aria-atomic="true"></div>
+                                                      </div>
+                                                      <div class="HB1eCd-Vkfede-NBtyUd-PvRhvb-LwH6nd"></div>
+                                                </div>
+                                          </div>
+                                          <div class="BbxBP HP6J1d K5Zlne" jsname="WA9qLc" jscontroller="RQOkef"
+                                                jsaction="rcuQ6b:JdcaS;MxH79b:JdcaS;VbOlFf:ywL4Jf;FaOgy:ywL4Jf; keydown:Hq2uPe; wheel:Ut4Ahc;"
+                                                data-top-navigation="true" data-is-preview="false">
+                                                <div class="DXsoRd YTv4We oNsfjf" role="button" tabindex="0"
+                                                      jsaction="click:LUvzV" jsname="z4Tpl" id="s9iPrd"
+                                                      aria-haspopup="true" aria-controls="yuynLe" aria-expanded="false">
+                                                      <svg class="wFCWne" viewbox="0 0 24 24" stroke="currentColor"
+                                                            jsname="B1n9ub" focusable="false">
+                                                            <g transform="translate(12,12)">
+                                                                  <path class="hlJH0" d="M-9 -5 L9 -5" fill="none"
+                                                                        stroke-width="2"></path>
+                                                                  <path class="HBu6N" d="M-9 0 L9 0" fill="none"
+                                                                        stroke-width="2"></path>
+                                                                  <path class="cLAGQe" d="M-9 5 L9 5" fill="none"
+                                                                        stroke-width="2"></path>
+                                                            </g>
+                                                      </svg>
+                                                </div>
+                                                <nav id="mainNav">
+                                                      <ul class="nav-list">
+                                                            <li><a href="about.html" class="nav-link">About</a></li>
+                                                            <li><a href="projects.html"
+                                                                        class="nav-link active">Projects</a></li>
+                                                            <li><a href="publications.html"
+                                                                        class="nav-link">Publications</a></li>
+                                                            <li><a href="activities.html"
+                                                                        class="nav-link">Activities</a></li>
+                                                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                                                      </ul>
+                                                </nav>
+                                                <div class="VLoccc K5Zlne QDWEj U8eYrb" jsname="rtFGi">
+                                                      <div class="Pvc6xe">
+                                                            <div jsname="I8J07e" class="TlfmSc YSH9J"><a class="GAuSPc"
+                                                                        jsname="jIujaf" href="about.html"><span
+                                                                              class="QTKDff">Data Intelligence
+                                                                              Group</span></a>
+                                                            </div>
+                                                            <nav class="plFg0c" jscontroller="HXO1uc"
+                                                                  jsaction="rcuQ6b:rcuQ6b;MxH79b:CfS0pe;" id="WDxLfe"
+                                                                  data-is-preview="false" style="visibility: hidden;"
+                                                                  role="navigation" tabindex="-1">
+                                                                  <ul jsname="waIgnc" class="K1Ci7d oXBWEc jYxBte">
+                                                                        <li jsname="ibnC6b" data-nav-level="1"
+                                                                              class="VsJjtf">
+                                                                              <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
+                                                                                    <div class="I35ICb"
+                                                                                          jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                          <a class="aJHbb dk90Ob jgXgSe HlqNPb"
+                                                                                                jscontroller="yUHiM"
+                                                                                                jsaction="rcuQ6b:WYd;"
+                                                                                                jsname="QwLHlb"
+                                                                                                role="link" tabindex="0"
+                                                                                                data-navtype="1"
+                                                                                                href="about.html"
+                                                                                                data-url="/about"
+                                                                                                data-type="1"
+                                                                                                data-level="1">About</a>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="rgLkl"></div>
+                                                                        </li>
+                                                                        <li jsname="ibnC6b" data-nav-level="1"
+                                                                              class="VsJjtf">
+                                                                              <div class="PsKE7e qV4dIc Qrrb5 YSH9J M9vuGd"
+                                                                                    aria-current="true">
+                                                                                    <div class="I35ICb"
+                                                                                          jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                          <a class="aJHbb dk90Ob jgXgSe HlqNPb"
+                                                                                                jscontroller="yUHiM"
+                                                                                                jsaction="rcuQ6b:WYd;"
+                                                                                                jsname="QwLHlb"
+                                                                                                role="link" tabindex="0"
+                                                                                                data-navtype="1"
+                                                                                                aria-selected="true"
+                                                                                                href=""
+                                                                                                data-url="/projects"
+                                                                                                data-type="1"
+                                                                                                data-level="1">Projects</a>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="rgLkl"></div>
+                                                                        </li>
+                                                                        <li jsname="ibnC6b" data-nav-level="1"
+                                                                              class="VsJjtf">
+                                                                              <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
+                                                                                    <div class="I35ICb"
+                                                                                          jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                          <a class="aJHbb dk90Ob jgXgSe HlqNPb"
+                                                                                                jscontroller="yUHiM"
+                                                                                                jsaction="rcuQ6b:WYd;"
+                                                                                                jsname="QwLHlb"
+                                                                                                role="link" tabindex="0"
+                                                                                                data-navtype="1"
+                                                                                                href="publications.html"
+                                                                                                data-url="/publications"
+                                                                                                data-type="1"
+                                                                                                data-level="1">Publications</a>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="rgLkl"></div>
+                                                                        </li>
+                                                                        <li jsname="ibnC6b" data-nav-level="1"
+                                                                              class="VsJjtf">
+                                                                              <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
+                                                                                    <div class="I35ICb"
+                                                                                          jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                          <a class="aJHbb dk90Ob jgXgSe HlqNPb"
+                                                                                                jscontroller="yUHiM"
+                                                                                                jsaction="rcuQ6b:WYd;"
+                                                                                                jsname="QwLHlb"
+                                                                                                role="link" tabindex="0"
+                                                                                                data-navtype="1"
+                                                                                                href="activities.html"
+                                                                                                data-url="/opportunities"
+                                                                                                data-type="1"
+                                                                                                data-level="1">Opportunities</a>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="rgLkl"></div>
+                                                                        </li>
+                                                                        <li jsname="ibnC6b" data-nav-level="1"
+                                                                              class="VsJjtf">
+                                                                              <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
+                                                                                    <div class="I35ICb"
+                                                                                          jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                          <a class="aJHbb dk90Ob jgXgSe HlqNPb"
+                                                                                                jscontroller="yUHiM"
+                                                                                                jsaction="rcuQ6b:WYd;"
+                                                                                                jsname="QwLHlb"
+                                                                                                role="link" tabindex="0"
+                                                                                                data-navtype="1"
+                                                                                                href="contact.html"
+                                                                                                data-url="/contact"
+                                                                                                data-type="1"
+                                                                                                data-level="1">Contact</a>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="rgLkl"></div>
+                                                                        </li>
+                                                                        <li jsname="ibnC6b" data-nav-level="1"
+                                                                              class="VsJjtf ZmrVpf oXBWEc"
+                                                                              more-menu-item
+                                                                              jsaction="mouseenter:Vx8Jlb; mouseleave:ysDRUd">
+                                                                              <div class="PsKE7e qV4dIc Qrrb5 YSH9J">
+                                                                                    <div class="I35ICb"
+                                                                                          jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                          <a class="aJHbb dk90Ob jgXgSe HlqNPb"
+                                                                                                jscontroller="yUHiM"
+                                                                                                jsaction="rcuQ6b:WYd;"
+                                                                                                jsname="QwLHlb"
+                                                                                                role="link" tabindex="0"
+                                                                                                data-navtype="1"
+                                                                                                aria-expanded="false"
+                                                                                                aria-haspopup="true"
+                                                                                                data-level="1">更多</a>
+                                                                                          <div class="mBHtvb u5fiyc"
+                                                                                                role="presentation"
+                                                                                                title="展开/收起"
+                                                                                                jsaction="click:oESVTe"
+                                                                                                jsname="ix0Hvc">
+                                                                                                <svg class="dvmRw"
+                                                                                                      viewbox="0 0 24 24"
+                                                                                                      stroke="currentColor"
+                                                                                                      jsname="HIH2V"
+                                                                                                      focusable="false">
+                                                                                                      <g
+                                                                                                            transform="translate(9.7,12) rotate(45)">
+                                                                                                            <path class="K4B8Y"
+                                                                                                                  d="M-4.2 0 L4.2 0"
+                                                                                                                  stroke-width="2">
+                                                                                                            </path>
+                                                                                                      </g>
+                                                                                                      <g
+                                                                                                            transform="translate(14.3,12) rotate(-45)">
+                                                                                                            <path class="MrYMx"
+                                                                                                                  d="M-4.2 0 L4.2 0"
+                                                                                                                  stroke-width="2">
+                                                                                                            </path>
+                                                                                                      </g>
+                                                                                                </svg>
+                                                                                          </div>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="oGuwee eWDljc RPRy1e Mkt3Tc"
+                                                                                    style="display:none;" jsname="QXE97"
+                                                                                    jsaction="transitionend:SJBdh"
+                                                                                    role="group">
+                                                                                    <ul class="VcS63b">
+                                                                                          <li jsname="ibnC6b"
+                                                                                                data-nav-level="2"
+                                                                                                class="ijMPi ZmrVpf"
+                                                                                                in-more-item>
+                                                                                                <div
+                                                                                                      class="PsKE7e IKA38e oNsfjf">
+                                                                                                      <div class="I35ICb"
+                                                                                                            jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                                            <a class="aJHbb hDrhEe HlqNPb"
+                                                                                                                  jscontroller="yUHiM"
+                                                                                                                  jsaction="rcuQ6b:WYd;"
+                                                                                                                  jsname="QwLHlb"
+                                                                                                                  role="link"
+                                                                                                                  tabindex="0"
+                                                                                                                  data-navtype="1"
+                                                                                                                  href="about.html"
+                                                                                                                  data-url="/about"
+                                                                                                                  data-type="1"
+                                                                                                                  data-in-more-submenu="true"
+                                                                                                                  data-level="2">About</a>
                                                                                                       </div>
-                                                                                                </a>
-                                                                                          </div>
-                                                                                    </div>
+                                                                                                </div>
+                                                                                          </li>
+                                                                                          <li jsname="ibnC6b"
+                                                                                                data-nav-level="2"
+                                                                                                class="ijMPi ZmrVpf"
+                                                                                                in-more-item>
+                                                                                                <div class="PsKE7e IKA38e oNsfjf lhZOrc"
+                                                                                                      aria-current="true">
+                                                                                                      <div class="I35ICb"
+                                                                                                            jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                                            <a class="aJHbb hDrhEe HlqNPb"
+                                                                                                                  jscontroller="yUHiM"
+                                                                                                                  jsaction="rcuQ6b:WYd;"
+                                                                                                                  jsname="QwLHlb"
+                                                                                                                  role="link"
+                                                                                                                  tabindex="0"
+                                                                                                                  data-navtype="1"
+                                                                                                                  aria-selected="true"
+                                                                                                                  href=""
+                                                                                                                  data-url="/projects"
+                                                                                                                  data-type="1"
+                                                                                                                  data-in-more-submenu="true"
+                                                                                                                  data-level="2">Projects</a>
+                                                                                                      </div>
+                                                                                                </div>
+                                                                                          </li>
+                                                                                          <li jsname="ibnC6b"
+                                                                                                data-nav-level="2"
+                                                                                                class="ijMPi ZmrVpf"
+                                                                                                in-more-item>
+                                                                                                <div
+                                                                                                      class="PsKE7e IKA38e oNsfjf">
+                                                                                                      <div class="I35ICb"
+                                                                                                            jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                                            <a class="aJHbb hDrhEe HlqNPb"
+                                                                                                                  jscontroller="yUHiM"
+                                                                                                                  jsaction="rcuQ6b:WYd;"
+                                                                                                                  jsname="QwLHlb"
+                                                                                                                  role="link"
+                                                                                                                  tabindex="0"
+                                                                                                                  data-navtype="1"
+                                                                                                                  href="publications.html"
+                                                                                                                  data-url="/publications"
+                                                                                                                  data-type="1"
+                                                                                                                  data-in-more-submenu="true"
+                                                                                                                  data-level="2">Publications</a>
+                                                                                                      </div>
+                                                                                                </div>
+                                                                                          </li>
+                                                                                          <li jsname="ibnC6b"
+                                                                                                data-nav-level="2"
+                                                                                                class="ijMPi ZmrVpf"
+                                                                                                in-more-item>
+                                                                                                <div
+                                                                                                      class="PsKE7e IKA38e oNsfjf">
+                                                                                                      <div class="I35ICb"
+                                                                                                            jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                                            <a class="aJHbb hDrhEe HlqNPb"
+                                                                                                                  jscontroller="yUHiM"
+                                                                                                                  jsaction="rcuQ6b:WYd;"
+                                                                                                                  jsname="QwLHlb"
+                                                                                                                  role="link"
+                                                                                                                  tabindex="0"
+                                                                                                                  data-navtype="1"
+                                                                                                                  href="activities.html"
+                                                                                                                  data-url="/opportunities"
+                                                                                                                  data-type="1"
+                                                                                                                  data-in-more-submenu="true"
+                                                                                                                  data-level="2">Opportunities</a>
+                                                                                                      </div>
+                                                                                                </div>
+                                                                                          </li>
+                                                                                          <li jsname="ibnC6b"
+                                                                                                data-nav-level="2"
+                                                                                                class="ijMPi ZmrVpf"
+                                                                                                in-more-item>
+                                                                                                <div
+                                                                                                      class="PsKE7e IKA38e oNsfjf">
+                                                                                                      <div class="I35ICb"
+                                                                                                            jsaction="click:vHQTA(QwLHlb); keydown:mPuKz(QwLHlb);">
+                                                                                                            <a class="aJHbb hDrhEe HlqNPb"
+                                                                                                                  jscontroller="yUHiM"
+                                                                                                                  jsaction="rcuQ6b:WYd;"
+                                                                                                                  jsname="QwLHlb"
+                                                                                                                  role="link"
+                                                                                                                  tabindex="0"
+                                                                                                                  data-navtype="1"
+                                                                                                                  href="contact.html"
+                                                                                                                  data-url="/contact"
+                                                                                                                  data-type="1"
+                                                                                                                  data-in-more-submenu="true"
+                                                                                                                  data-level="2">Contact</a>
+                                                                                                      </div>
+                                                                                                </div>
+                                                                                          </li>
+                                                                                    </ul>
                                                                               </div>
-                                                                        </div>
-                                                                        <div class="oKdM2c ZZyype">
-                                                                              <div id="h.56d902a15b87d83e_108" class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec wHaque g5GTcb">
-                                                                                    <div class="jXK9ad-SmKAyb">
-                                                                                          <div class="tyJCtd mGzaTb Depvyb baZpAe"><small id="h.6tfhwy4dy9kn" dir="ltr" class="zfr3Q TMjjoe CDt4Ke "
-                                                                                                                                          style="display: block; text-align: left;"><span class="C9DxTc " style="">© Copyright Data Intelligence Group - 2025</span></small>
+                                                                        </li>
+                                                                  </ul>
+                                                            </nav>
+                                                            <div jscontroller="gK4msf" class="RBEWZc" jsname="h04Zod"
+                                                                  jsaction="rcuQ6b:WYd;JIbuQc:AT95Ub;VbOlFf:HgE5D;FaOgy:HgE5D;MxH79b:JdcaS;"
+                                                                  data-side-navigation="false">
+                                                                  <div role="button"
+                                                                        class="U26fgb mUbCce fKz7Od iWs3gf Wdnjke M9Bg4d"
+                                                                        jscontroller="VXdfxd"
+                                                                        jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;"
+                                                                        jsshadow jsname="R9oOZd" aria-label="打开搜索栏"
+                                                                        aria-disabled="false" tabindex="0"
+                                                                        data-tooltip="打开搜索栏" aria-expanded="false"
+                                                                        data-tooltip-vertical-offset="-12"
+                                                                        data-tooltip-horizontal-offset="0">
+                                                                        <div class="VTBa7b MbhUzd" jsname="ksKsZd">
+                                                                        </div><span jsslot class="xjKiLb"><span
+                                                                                    class="Ce1Y1c"
+                                                                                    style="top: -12px"><svg
+                                                                                          class="vu8Pwe tCHXDc YSH9J"
+                                                                                          viewbox="0 0 24 24"
+                                                                                          focusable="false">
+                                                                                          <path
+                                                                                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                                                                          </path>
+                                                                                          <path d="M0 0h24v24H0z"
+                                                                                                fill="none"></path>
+                                                                                    </svg></span></span>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+                                                      <div jsname="mADGA" class="zDUgLc"></div>
+                                                </div>
+                                                <div class="TxnWlb" jsname="BDdyze" jsaction="click:LUvzV"></div>
+                                          </div>
+                                    </header>
+                                    <div role="main" tabindex="-1" class="UtePc RCETm" dir="ltr">
+                                          <section id="h.56d902a15b87d83e_1" class="yaqOZd LB7kq cJgDec nyKByd O13XJf"
+                                                style="">
+                                                <div class="Nu95r">
+                                                      <div class="IFuOkc"
+                                                            style="background-position: center center; background-image: url(static/image/P78C23F815VUkrnMxWVICHLsxys5Vo-eUbMnZSBBDulu7ea47P-TVtJQRoRRJGHeXpI3IuQ-58e-u69zGQwoFo4=w16383.jpg); background-size: cover;"
+                                                            jsname="LQX2Vd"></div>
+                                                </div>
+                                                <div class="mYVXT">
+                                                      <div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1">
+                                                            <div
+                                                                  class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP">
+                                                                  <div class="JNdkSc-SmKAyb LkDMRd">
+                                                                        <div class="" jscontroller="sGwD4d"
+                                                                              jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;"
+                                                                              jsname="F57UId"></div>
+                                                                  </div>
+                                                            </div>
+                                                            <div
+                                                                  class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc">
+                                                                  <div class="JNdkSc-SmKAyb LkDMRd">
+                                                                        <div class="" jscontroller="sGwD4d"
+                                                                              jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;"
+                                                                              jsname="F57UId">
+                                                                              <div class="oKdM2c ZZyype Kzv0Me">
+                                                                                    <div id="h.56d902a15b87d83e_4"
+                                                                                          class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb">
+                                                                                          <div class="jXK9ad-SmKAyb">
+                                                                                                <div
+                                                                                                      class="tyJCtd mGzaTb Depvyb baZpAe lkHyyc">
+                                                                                                      <h1 id="h.gje0dvhjrf5v"
+                                                                                                            dir="ltr"
+                                                                                                            class="zfr3Q duRjpb CDt4Ke "
+                                                                                                            style="text-align: center;">
+                                                                                                            <span class="C9DxTc "
+                                                                                                                  style="">Projects</span>
+                                                                                                      </h1>
+                                                                                                </div>
                                                                                           </div>
                                                                                     </div>
                                                                               </div>
                                                                         </div>
                                                                   </div>
                                                             </div>
-                                                      </div>
-                                                      <div class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP">
-                                                            <div class="JNdkSc-SmKAyb LkDMRd">
-                                                                  <div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div>
+                                                            <div
+                                                                  class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP">
+                                                                  <div class="JNdkSc-SmKAyb LkDMRd">
+                                                                        <div class="" jscontroller="sGwD4d"
+                                                                              jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;"
+                                                                              jsname="F57UId"></div>
+                                                                  </div>
                                                             </div>
                                                       </div>
                                                 </div>
+                                          </section>
+                                    </div>
+                                    <div class="research-container">
+                                          <div class="max-w-6xl mx-auto space-y-12">
+                                                <!-- 方向一 -->
+                                                <section class="bg-white rounded-xl shadow-lg p-8">
+                                                      <h1
+                                                            class="text-3xl font-bold text-blue-600 border-l-4 border-blue-500 pl-3 mb-4">
+                                                            方向一：公共交通智能优化与拥堵治理</h1>
+                                                      <p class="text-gray-700 mb-4">——
+                                                            以智能优化解锁城市通行新格局，构建智能协同、绿色低碳、个性驱动的未来交通生态体系！</p>
+                                                      <p class="text-gray-600 mb-6">
+                                                            日益严重的交通拥堵问题，不仅降低了城市运行效率，更影响居民的出行体验和生活品质。尽管政府长期推行“公交优先”政策，但公共交通的便捷性、舒适度和准时率仍未达到人们的期望。解决这一问题迫切需要先进的数据分析和人工智能技术。
+                                                      </p>
+                                                      <div class="space-y-6">
+                                                            <div>
+                                                                  <h2 class="text-xl font-semibold text-blue-500 mb-2">
+                                                                        1. 公共交通服务评价体系</h2>
+                                                                  <p class="text-gray-600 mb-4">
+                                                                        整合多种交通数据，综合衡量公交服务质量，助力交通正常和管理优化。
+                                                                  </p>
+                                                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                        <a href="./static/image/research/1-1.png"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="不同公交线路短期、中期和长期的稳定性值变化趋势分析图（BUS 2线路与BUS 3线路对比）">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-1.png"
+                                                                                    alt="公交线路稳定性变化趋势">
+                                                                        </a>
+                                                                        <a href="./static/image/research/1-2.png"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="站点/行程指标度量方法示意图，展示了多源数据如何融合分析用于公交服务评价体系">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-2.png"
+                                                                                    alt="公交服务评价体系指标分析方法示意图">
+                                                                        </a>
+                                                                  </div>
+                                                            </div>
+                                                            <div>
+                                                                  <h2 class="text-xl font-semibold text-blue-500 mb-2">
+                                                                        2. 交通拥堵演化规律</h2>
+                                                                  <p class="text-gray-600">
+                                                                        分析道路网络上的拥堵如何演化，并研究天气、事件等外部因素的影响，提升预测准确性并辅助交通管理。
+                                                                  </p>
+                                                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                        <a href="./static/image/research/1-3.gif"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="交通拥堵演化规律动态图，直观展示道路网络交通拥堵如何随时间动态变化">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-3.gif"
+                                                                                    alt="交通拥堵演化动态示意图">
+                                                                        </a>
+                                                                        <a href="./static/image/research/1-4.png"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="交通拥堵事件对交通状态影响分析图">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-4.png"
+                                                                                    alt="交通拥堵事件影响分析图">
+                                                                        </a>
+                                                                  </div>
+                                                            </div>
+                                                            <div>
+                                                                  <h2 class="text-xl font-semibold text-blue-500 mb-2">
+                                                                        3. 数据驱动公共交通优化</h2>
+                                                                  <p class="text-gray-600">
+                                                                        深度挖掘交通规律，构建数据驱动的优化框架，自动推理优调度策略，提升交通效率。
+                                                                  </p>
+                                                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                        <a href="./static/image/research/1-5.png"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="数据驱动公共交通优化框架流程示意图，展示优化策略推理过程">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-5.png"
+                                                                                    alt="数据驱动交通优化框架图">
+                                                                        </a>
+                                                                        <a href="./static/image/research/1-6.jpg"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="数据驱动的公共交通效率提升效果示意图">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-6.jpg"
+                                                                                    alt="数据驱动公共交通效率提升图">
+                                                                        </a>
+                                                                  </div>
+                                                            </div>
+                                                            <div>
+                                                                  <h2 class="text-xl font-semibold text-blue-500 mb-2">
+                                                                        4. 优化公交专用车道的调度策略</h2>
+                                                                  <p class="text-gray-600">
+                                                                        通过智能算法合理分配专用车道资源，减少交通拥堵，提升公交车的准点率和运行效率。
+                                                                  </p>
+                                                                  <div class="grid grid-cols-1 gap-4">
+                                                                        <a href="./static/image/research/1-7.jpg"
+                                                                              data-lightbox="public-transport"
+                                                                              data-title="公交专用车道优化调度策略实施效果图">
+                                                                              <img class="rounded shadow cursor-pointer"
+                                                                                    src="./static/image/research/1-7.jpg"
+                                                                                    alt="公交专用车道优化调度示意图">
+                                                                        </a>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+                                                </section>
+
+                                                <!-- 方向二 -->
+                                                <section class="bg-white rounded-xl shadow-lg p-8">
+                                                      <h1
+                                                            class="text-3xl font-bold text-blue-600 border-l-4 border-blue-500 pl-3 mb-4">
+                                                            方向二：4D航空轨迹数据分析与应用</h1>
+                                                      <p class="text-gray-700 mb-4">—— 从亿万条航迹中解码天空秩序，让飞行更安全、更高效、更环保！</p>
+                                                      <p class="text-gray-600">
+                                                            航空轨迹数据承载着丰富的信息，记录了每架飞机的飞行路径、速度、高度、时间及相关事件。深入挖掘这些数据，不仅能提升空域管理的精准度与安全性，还能为航班调度优化、环境保护、以及航空决策提供科学支持。
+                                                      </p>
+                                                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                            <a href="./static/image/research/2-1.jpg"
+                                                                  data-lightbox="public-transport"
+                                                                  data-title="4D航空轨迹数据可视化分析示意图，展示了二维平面航迹和三维空间立体航迹分析结果">
+                                                                  <img class="rounded shadow cursor-pointer"
+                                                                        src="./static/image/research/2-1.jpg"
+                                                                        alt="4D航空轨迹数据可视化分析">
+                                                            </a>
+                                                            <a href="./static/image/research/2-2.jpg"
+                                                                  data-lightbox="public-transport"
+                                                                  data-title="机场航空交通实景图，展示飞机起飞、机场塔台及机场整体环境">
+                                                                  <img class="rounded shadow cursor-pointer"
+                                                                        src="./static/image/research/2-2.jpg"
+                                                                        alt="机场航空交通实景图">
+                                                            </a>
+                                                      </div>
+                                                </section>
+
+                                                <!-- 方向三 -->
+                                                <section class="bg-white rounded-xl shadow-lg p-8">
+                                                      <h1
+                                                            class="text-3xl font-bold text-blue-600 border-l-4 border-blue-500 pl-3 mb-4">
+                                                            方向三：软件代码智能分析与优化</h1>
+                                                      <p class="text-gray-700 mb-4">—— 探究前沿AI技术，洞见代码之复杂，保障软件之安全、可靠、高效！
+                                                      </p>
+                                                      <ul class="space-y-4">
+                                                            <li><strong>代码漏洞检测：</strong>开发代码表征学习技术和智能安全分析工具，自动发现代码中的潜在漏洞，提高软件系统的安全性。
+                                                            </li>
+                                                            <li><strong>代码相似性检测：</strong>通过先进的代码比较技术，识别相似代码片段，对源码重用、抄袭及漏洞传递等进行检测。
+                                                            </li>
+                                                            <li><strong>代码攻击与保护策略：</strong>利用AI方法研究如何识别、预防和抵御针对软件代码的恶意攻击。
+                                                            </li>
+                                                            <div class="grid grid-cols-1  gap-4">
+                                                                  <a href="./static/image/research/3-1.jpg"
+                                                                        data-lightbox="public-transport"
+                                                                        data-title="基于深度学习的代码漏洞检测框架示意图，展示从源码到漏洞分类的完整分析过程">
+                                                                        <img class="rounded shadow cursor-pointer"
+                                                                              src="./static/image/research/3-1.jpg"
+                                                                              alt="深度学习代码漏洞检测流程图">
+                                                                  </a>
+                                                            </div>
+                                                      </ul>
+                                                </section>
+
+                                                <!-- 方向四 -->
+                                                <section class="bg-white rounded-xl shadow-lg p-8">
+                                                      <h1
+                                                            class="text-3xl font-bold text-blue-600 border-l-4 border-blue-500 pl-3 mb-4">
+                                                            方向四：人工智能安全与应用</h1>
+                                                      <p class="text-gray-700 mb-4">—— 开启AI防护结界，让模型无惧攻击、数据无忧泄露、系统无可撼动！
+                                                      </p>
+                                                      <ul class="space-y-4">
+                                                            <li><strong>神经网络安全：</strong>探索图数据上的攻击与防御技术，包括模型萃取、对抗性图攻击、图神经网络的鲁棒性分析，及其在现实场景中的应用。
+                                                            </li>
+                                                            <li><strong>数据隐私保护：</strong>研究如何在保证AI模型性能的同时，利用差分隐私、联邦学习和加密计算等技术，防止数据泄露，提高数据安全性。
+                                                            </li>
+                                                            <li><strong>大模型安全：</strong>研究大模型在对抗攻击、隐私泄露、模型偏差等方面的安全挑战，并探索防护措施。
+                                                            </li>
+                                                            <li><strong>AI系统安全评估与防御：</strong>构建AI安全评估体系，量化测量模型在真实环境中的安全性。
+                                                            </li>
+                                                            <div class="grid grid-cols-1  gap-4">
+                                                                  <a href="./static/image/research/4-1.jpg"
+                                                                        data-lightbox="public-transport"
+                                                                        data-title="人工智能安全与应用">
+                                                                        <img class="rounded shadow cursor-pointer"
+                                                                              src="./static/image/research/4-1.jpg"
+                                                                              alt="人工智能安全与应用" width="100%"
+                                                                              style="margin: 0 auto;">
+                                                                  </a>
+                                                            </div>
+                                                      </ul>
+                                                </section>
+
                                           </div>
-                                    </section>
-                              </footer>
+
+                                    </div>
+                                    <div class="Xpil1b xgQ6eb"></div>
+                                    <footer jsname="yePe5c">
+                                          <section id="h.56d902a15b87d83e_107" class="yaqOZd qeLZfd">
+                                                <div class="IFuOkc"></div>
+                                                <div class="mYVXT">
+                                                      <div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1">
+                                                            <div
+                                                                  class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb JNdkSc SQVYQc yYI8W HQwdzb">
+                                                                  <div class="JNdkSc-SmKAyb LkDMRd">
+                                                                        <div class="" jscontroller="sGwD4d"
+                                                                              jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;"
+                                                                              jsname="F57UId">
+                                                                              <div class="oKdM2c ZZyype Kzv0Me">
+                                                                                    <div id="h.56d902a15b87d83e_104"
+                                                                                          class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb">
+                                                                                          <div class="jXK9ad-SmKAyb">
+                                                                                                <div
+                                                                                                      class="tyJCtd baZpAe">
+                                                                                                      <a href="https://it.ouc.edu.cn/"
+                                                                                                            target="_blank"
+                                                                                                            class="fqo2vd">
+                                                                                                            <div
+                                                                                                                  class="t3iYD">
+                                                                                                                  <img src="static/image/ouc-removebg-preview.png"
+                                                                                                                        class="CENy8b">
+                                                                                                            </div>
+                                                                                                      </a>
+                                                                                                </div>
+                                                                                          </div>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="oKdM2c ZZyype">
+                                                                                    <div id="h.56d902a15b87d83e_108"
+                                                                                          class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec wHaque g5GTcb">
+                                                                                          <div class="jXK9ad-SmKAyb">
+                                                                                                <div
+                                                                                                      class="tyJCtd mGzaTb Depvyb baZpAe">
+                                                                                                      <small id="h.6tfhwy4dy9kn"
+                                                                                                            dir="ltr"
+                                                                                                            class="zfr3Q TMjjoe CDt4Ke "
+                                                                                                            style="display: block; text-align: left;"><span
+                                                                                                                  class="C9DxTc "
+                                                                                                                  style="">©
+                                                                                                                  Copyright
+                                                                                                                  Data
+                                                                                                                  Intelligence
+                                                                                                                  Group
+                                                                                                                  -
+                                                                                                                  2025</span></small>
+                                                                                                </div>
+                                                                                          </div>
+                                                                                    </div>
+                                                                              </div>
+                                                                        </div>
+                                                                  </div>
+                                                            </div>
+                                                            <div
+                                                                  class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP">
+                                                                  <div class="JNdkSc-SmKAyb LkDMRd">
+                                                                        <div class="" jscontroller="sGwD4d"
+                                                                              jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;"
+                                                                              jsname="F57UId"></div>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </section>
+                                    </footer>
+                              </div>
                         </div>
                   </div>
+                  <script nonce="jQx65DV8rSpimKkCFdcE0w">
+                        DOCS_timing['cov'] = new Date().getTime();
+                  </script>
+                  <script src="static/js/m=view.js" id="base-js" nonce="jQx65DV8rSpimKkCFdcE0w"></script>
             </div>
-            <script nonce="jQx65DV8rSpimKkCFdcE0w">
-                  DOCS_timing['cov'] = new Date().getTime();
-            </script>
-            <script src="static/js/m=view.js" id="base-js" nonce="jQx65DV8rSpimKkCFdcE0w"></script>
       </div>
-</div>
-<div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div>
+      <div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div>
 </body>
 
 </html>
