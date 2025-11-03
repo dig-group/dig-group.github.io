@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN" itemscope itemtype="http://schema.org/WebPage">
 
-<head>
+
       <script nonce="Tpk3QAcHPqtG0yLBnyoqqA">
             window['ppConfig'] = {
                   productName: '6b8ce7c01e3dacd3d2c7a8cd322ff979',
@@ -347,6 +347,53 @@ We are currently recruiting for new PhD students in the group. You can apply for
       <script nonce="Tpk3QAcHPqtG0yLBnyoqqA"></script>
       <title>McGill Research Group - Activities</title>
       <style jsname="ptDGoc" nonce="XoYm4-QIFDy_0MbJJkYITg">
+             /* 2025/11 新增activity部分的自定义滚动条（右侧视觉条） */
+             /* -------- 自定义滚动条 -------- */
+            /* Chrome / Edge / Safari */
+             ::-webkit-scrollbar {
+            width: 16px; /* ✅ 加宽：默认一般是 8-10px */
+            }
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb {
+            background: #bdbdbd; /* 灰色滑块 */
+            border-radius: 10px;
+            border: 3px solid #f1f1f1; /* 给滑块留出内边界，看起来更立体 */
+            }
+            ::-webkit-scrollbar-thumb:hover {
+            background: #9e9e9e;
+            }
+
+            /* Firefox */
+            * {
+            scrollbar-width: auto; /* 让 Firefox 使用系统默认宽度 */
+            scrollbar-color: #bdbdbd #f1f1f1;
+            }
+
+            /* 回到顶部按钮 */
+            #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: opacity 0.3s ease;
+            }
+            #backToTop:hover {
+            background-color: #0056b3;
+            }
             .ImnMyf {
                   background-color: rgba(255,255,255,1);
                   color: rgba(33,33,33,1);
@@ -391,10 +438,10 @@ We are currently recruiting for new PhD students in the group. You can apply for
             }
 
             .activity-container {
-                  width: 95%;          /* 占据屏幕宽度的80% */
+                  width: 75%;          /* 占据屏幕宽度的80% */
                   max-width: 1800px;   /* 保留最大宽度限制 */
                   margin: 2rem auto;   /* 保持居中显示 */
-                  padding: 2rem;
+                  /* padding: 2rem; */
                   box-sizing: border-box; /* 包含padding计算 */
             }
 
@@ -1905,6 +1952,50 @@ We are currently recruiting for new PhD students in the group. You can apply for
                   opacity: 0.5;
             }
       </style>
+      <!-- 新增滚动条和回到顶部逻辑控制 -->
+      <script>
+      // 滚动条进度条
+      const scrollThumb = document.getElementById("scrollThumb");
+      const scrollbar = document.querySelector(".scrollbar");
+
+      function updateScrollbar() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollRatio = scrollTop / scrollHeight;
+      const thumbHeight = Math.max(40, 200 * (document.documentElement.clientHeight / document.documentElement.scrollHeight));
+      const thumbTop = (200 - thumbHeight) * scrollRatio;
+      scrollThumb.style.height = thumbHeight + "px";
+      scrollThumb.style.top = thumbTop + "px";
+      }
+
+      window.addEventListener("scroll", updateScrollbar);
+      window.addEventListener("resize", updateScrollbar);
+      updateScrollbar();
+
+      // 点击滚动条跳转
+      scrollbar.addEventListener("click", function(e) {
+      const rect = scrollbar.getBoundingClientRect();
+      const clickY = e.clientY - rect.top;
+      const ratio = clickY / rect.height;
+      window.scrollTo({
+            top: ratio * (document.documentElement.scrollHeight - document.documentElement.clientHeight),
+            behavior: "smooth"
+      });
+      });
+
+      // 回到顶部按钮
+      const backToTopBtn = document.getElementById("backToTop");
+      window.addEventListener("scroll", function() {
+      if (window.scrollY > 300) {
+            backToTopBtn.style.display = "flex";
+      } else {
+            backToTopBtn.style.display = "none";
+      }
+      });
+      backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      </script>
       <script nonce="Tpk3QAcHPqtG0yLBnyoqqA">
             _at_config = [null, "AIzaSyChg3MFqzdi1P5J-YvEyakkSA1yU7HRcDI", "897606708560-a63d8ia0t9dhtpdt4i3djab2m42see7o.apps.googleusercontent.com", null, null, null, null, null, null, null, null, null, null, null, "SITES_%s", null, null, null, null, null, null, null, null, null, ["AHKXmL3yobP8tTrhpCNqyK0ltM_GumrZFH8dI1EYWLzxS2BtY4OnC4dtIo92sNx9LLgqdfRG--qS", 1, "CLLilvmd7YsDFbrazgAdSWMjFg", 1740981622124849, [5703839, 5704621, 5706832, 5706836, 5707711, 5737784, 5737800, 5738513, 5738529, 5740798, 5740814, 5743108, 5743124, 5747263, 5748013, 5748029, 5752678, 5752694, 5753313, 5753329, 5754213, 5754229, 5758807, 5758823, 5762243, 5762259, 5764252, 5764268, 5765535, 5765551, 5766761, 5766777, 5773662, 5773678, 5774331, 5774347, 5774836, 5774852, 5776501, 5776517, 5784931, 5784947, 5784951, 5784967, 5791766, 5791782, 14101306, 14101502, 14101510, 14101534, 49375314, 49375322, 49472063, 49472071, 49622823, 49622831, 49623173, 49623181, 49643568, 49643576, 49644015, 49644023, 49769337, 49769345, 49822921, 49822929, 49823164, 49823172, 49833462, 49833470, 49842855, 49842863, 49924706, 49924714, 50266222, 50266230, 50273528, 50273536, 50297076, 50297084, 50297426, 50297434, 50529103, 50529111, 50549555, 50549563, 50561343, 50561351, 50586962, 50586970, 70971256, 70971264, 71035517, 71035525, 71038255, 71038263, 71079938, 71079946, 71085241, 71085249, 71120968, 71120976, 71185170, 71185178, 71197826, 71197834, 71238946, 71238954, 71289146, 71289154, 71325556, 71325564, 71387889, 71387897, 71411982, 71411990, 71429507, 71429515, 71478200, 71478208, 71478589, 71478597, 71528417, 71528425, 71528597, 71528605, 71530083, 71530091, 71536699, 71536707, 71544834, 71544842, 71545513, 71545521, 71546425, 71546433, 71561541, 71561549, 71573870, 71573878, 71642103, 71642111, 71658040, 71658048, 71659813, 71659821, 71689860, 71689868, 71720760, 71721087, 71721095, 71798420, 71798436, 71798440, 71798456, 71882106, 71882114, 71894363, 71894371, 71897827, 71897835, 71960540, 71960548, 71961126, 71961134, 94327661, 94327669, 94333163, 94333171, 94353368, 94353376, 94434257, 94434265, 94502654, 94502662, 94507744, 94507752, 94597639, 94597647, 94624865, 94624873, 94629757, 94629765, 94630911, 94661802, 94661810, 94684872, 94684880, 94692298, 94692306, 94784571, 94784579, 94875009, 94875017, 94904089, 94904097, 94918952, 94918960, 94929210, 94929218, 94942490, 94942498, 95065889, 95065897, 95087186, 95087194, 95112873, 95112881, 95118551, 95118559, 95135933, 95135941, 95234871, 95234879, 95314802, 95314810, 95317975, 99237681, 99237689, 99247596, 99247604, 99265946, 99265954, 99310979, 99310987, 99338440, 99338448, 99368792, 99368800, 99402331, 99402339, 101442805, 101442813, 101446888, 101446896, 101488582, 101488590, 101488823, 101488831, 101519280, 101519288, 101543440, 101543448, 101562406, 101562414, 101617516, 101617524, 101687117, 101687125, 101701489, 101701497, 101705087, 101754342, 101754350, 101801098, 101801106, 101922739, 101922747, 101922880, 101922888, 101939067, 101939075, 101939286, 101939294, 102013666, 102013674, 102015062, 102015070, 102030642, 102030650, 102065428, 102065436, 102133181, 102133189, 102145825, 102145833, 102146090, 102146095, 102159043, 102159051, 102161447, 102161455, 102198282, 102198290, 102199034, 102199050, 102244489, 102244497, 102378139, 102378144, 102457690, 102457698, 102517339, 102517344, 102545782, 102545790]], null, null, null, null, 0, null, null, null, null, null, null, null, null, null, "https://drive.google.com", null, null, null, null, null, null, null, null, null, 0, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "v2internal", "https://docs.google.com", null, null, null, null, null, null, "https://sites.google.com/new/", null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1, "", null, null, null, null, null, null, null, null, null, null, null, null, 6, null, null, "https://accounts.google.com/o/oauth2/auth", "https://accounts.google.com/o/oauth2/postmessageRelay", null, null, null, null, 78, "https://sites.google.com/new/?usp=viewer_footer", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "https://www.gstatic.com/atari/embeds/83a60601c213b72fb19c1855fb0c5f26/intermediate-frame-minified.html", 1, null, "v2beta", null, null, null, null, null, null, 4, "https://accounts.google.com/o/oauth2/iframe", null, null, null, null, null, null, "https://1310106997-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, 0, null, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1, null, null, [1740981622125, "editors.sites-viewer-frontend_20250218.02_p6", "730308207", null, 1, 1, ""], null, null, null, null, 0, null, null, 0, null, null, null, null, null, null, null, null, 20, 500, "https://domains.google.com", null, 0, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, 1, 0, 1, 0, 0, 0, 0, null, null, null, null, null, "https://www.google.com/calendar/embed", null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, "PROD", 0, null, 0, null, null, null, null, ""];
             window.globals = {
@@ -2230,6 +2321,8 @@ We are currently recruiting for new PhD students in the group. You can apply for
                                           <div class="TxnWlb" jsname="BDdyze" jsaction="click:LUvzV"></div>
                                     </div>
                               </header>
+                              <!-- 定位锚点 -->
+                              <a id="top"></a>
                               <div role="main" tabindex="-1" class="UtePc RCETm" dir="ltr">
                                     <section id="h.56d902a15b87d83e_47" class="yaqOZd LB7kq cJgDec nyKByd O13XJf" style="">
                                           <div class="Nu95r">
@@ -2266,7 +2359,12 @@ We are currently recruiting for new PhD students in the group. You can apply for
                                           </div>
                                     </section>
                               </div>
-
+                              
+                              <div class="scrollbar">
+                                    <div class="scroll-thumb" id="scrollThumb"></div>
+                              </div>
+                              
+                              
                               <div class="activity-container">
                                     <nav class="year-filter">
                                           <div class="year-btn active" data-year="all">全部</div>
@@ -2470,10 +2568,14 @@ We are currently recruiting for new PhD students in the group. You can apply for
 
                                           
                                     </div>
+                                    
                               </div>
 
-                              <div class="Xpil1b xgQ6eb"></div>
-                              <footer jsname="yePe5c">
+                              <div class="Xpil1b xgQ6eb" style="text-align: center;"><div>
+                                                                              <a href="#top" style="text-decoration: none">回到顶部↑</a>
+                                                                              
+                                                                        </div></div>
+                              <footer jsname="yePe5c" style="text-align: center;">
                                     <section id="h.56d902a15b87d83e_107" class="yaqOZd qeLZfd">
                                           <div class="IFuOkc"></div>
                                           <div class="mYVXT">
@@ -2500,12 +2602,13 @@ We are currently recruiting for new PhD students in the group. You can apply for
                                                                         <div class="oKdM2c ZZyype">
                                                                               <div id="h.56d902a15b87d83e_108" class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec wHaque g5GTcb">
                                                                                     <div class="jXK9ad-SmKAyb">
-                                                                                          <div class="tyJCtd mGzaTb Depvyb baZpAe"><small id="h.6tfhwy4dy9kn" dir="ltr" class="zfr3Q TMjjoe CDt4Ke "
+                                                                                          <div class="tyJCtd mGzaTb Depvyb baZpAe" style="padding: 0 40px;"><small id="h.6tfhwy4dy9kn" dir="ltr" class="zfr3Q TMjjoe CDt4Ke "
                                                                                                                                           style="display: block; text-align: left;"><span class="C9DxTc " style="">© Copyright Data Intelligence Group - 2025</span></small>
                                                                                           </div>
                                                                                     </div>
                                                                               </div>
                                                                         </div>
+                                                                        
                                                                   </div>
                                                             </div>
                                                       </div>
