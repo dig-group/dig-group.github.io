@@ -640,20 +640,25 @@
         class="fixed inset-0 bg-black bg-opacity-90 z-[9999] hidden flex justify-center items-center p-4 transition duration-300"
         onclick="closeModal()">
 
-        <div class="relative max-w-5xl max-h-full" onclick="event.stopPropagation()">
+        <button onclick="prevModalImage(event)"
+            class="absolute left-4 md:left-10 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl hover:text-blue-400 transition-all duration-200 z-50">
+            &#10094;
+        </button>
 
+        <div class="relative max-w-5xl max-h-full flex flex-col items-center" onclick="event.stopPropagation()">
             <button onclick="closeModal()"
                 class="absolute -top-10 right-0 text-white text-3xl font-bold p-2 transition duration-200 hover:text-blue-400">
                 &times;
             </button>
-
-            <img id="modal-image" src="" alt="放大图" class="max-h-[90vh] w-auto rounded-lg shadow-2xl cursor-pointer"
-                onclick="closeModal()">
-
+            <img id="modal-image" src="" alt="放大图" class="max-h-[85vh] w-auto rounded-lg shadow-2xl">
             <div id="modal-caption" class="mt-4 text-center text-white text-lg font-light max-w-full">
             </div>
-
         </div>
+
+        <button onclick="nextModalImage(event)"
+            class="absolute right-4 md:right-10 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl hover:text-blue-400 transition-all duration-200 z-50">
+            &#10095;
+        </button>
     </div>
     
 </div>
@@ -1087,7 +1092,7 @@
     });
     // ----------------------------
 
-    // 图片放大模态框控制 (更新: 接受并显示说明文字)
+    // 图片放大模态框控制 (更新: 接受并显示说明文字)  已经弃用
     // ----------------------------
     function openModal(imageSrc, captionText) { // 接收第二个参数 captionText
         const modal = document.getElementById('image-modal');
@@ -1110,7 +1115,75 @@
         document.body.style.overflow = '';
     }
 
+    // 轮播图 图片放大
+    // ----------------------------
+    // 模态框全局变量与翻页控制 (全新升级)
+    // ----------------------------
+    let currentModalImages = []; // 当前活动的全部图片
+    let currentModalIndex = 0;   // 当前看的是第几张
+    let currentModalTitle = "";  // 当前活动标题
 
+    // 专为活动轮播图定制的打开方式
+    function openModalForActivity(activityId, startIndex) {
+        const act = activityData.find(a => a.id === activityId);
+        if (!act) return;
+        
+        currentModalImages = act.images;
+        currentModalIndex = startIndex;
+        currentModalTitle = act.title;
+        
+        updateModalContent();
+        
+        const modal = document.getElementById('image-modal');
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 普通研究方向单图兼容保留
+    function openModal(imageSrc, captionText) { 
+        currentModalImages = [imageSrc];
+        currentModalIndex = 0;
+        currentModalTitle = "";
+        
+        const modalImage = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        modalImage.src = imageSrc;
+        modalCaption.innerText = captionText;
+        
+        document.getElementById('image-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+        // 如果是单图，隐藏左右翻页按钮
+        event.stopPropagation();
+    }
+
+    function closeModal() {
+        document.getElementById('image-modal').classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    function updateModalContent() {
+        const modalImage = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        
+        modalImage.src = currentModalImages[currentModalIndex];
+        // 动态显示：标题 - 图 1 / 6
+        modalCaption.innerText = `${currentModalTitle} - 图 ${currentModalIndex + 1} / ${currentModalImages.length}`;
+    }
+
+    function prevModalImage(event) {
+        event.stopPropagation(); // 防止点按钮时把模态框关了
+        if(currentModalImages.length <= 1) return;
+        currentModalIndex = (currentModalIndex - 1 + currentModalImages.length) % currentModalImages.length;
+        updateModalContent();
+    }
+
+    function nextModalImage(event) {
+        event.stopPropagation();
+        if(currentModalImages.length <= 1) return;
+        currentModalIndex = (currentModalIndex + 1) % currentModalImages.length;
+        updateModalContent();
+    }
 
 
     // publication部分的逻辑控制
@@ -1687,13 +1760,13 @@ function showSlide(activityId, delta) {
     let currentIndex = activitySlideIndices[activityId];
     let newIndex = (currentIndex + delta + images.length) % images.length;
 
-    // 当前图淡出
-    images[currentIndex].classList.remove('opacity-100');
-    images[currentIndex].classList.add('opacity-0');
+    // 当前图淡出并禁用点击
+    images[currentIndex].classList.remove('opacity-100', 'pointer-events-auto');
+    images[currentIndex].classList.add('opacity-0', 'pointer-events-none');
 
-    // 新图淡入
-    images[newIndex].classList.remove('opacity-0');
-    images[newIndex].classList.add('opacity-100');
+    // 新图淡入并允许点击
+    images[newIndex].classList.remove('opacity-0', 'pointer-events-none');
+    images[newIndex].classList.add('opacity-100', 'pointer-events-auto');
 
     activitySlideIndices[activityId] = newIndex;
 }
@@ -1716,16 +1789,17 @@ function renderActivityCards(data) {
 
     sortedData.forEach((act, index) => {
 
-        const carouselImagesHtml = act.images.map((imgSrc, imgIndex) => {
-            const opacityClass = imgIndex === 0 ? 'opacity-100' : 'opacity-0';
-            return `
-                 <img src="${imgSrc}" 
-                 
-             
+       const carouselImagesHtml = act.images.map((imgSrc, imgIndex) => {
+        // 核心修改：不可见的图片同时加上 pointer-events-none 彻底禁止拦截点击
+        const opacityClass = imgIndex === 0 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none';
+        
+        return `
+             <img src="${imgSrc}" 
+             onclick="openModalForActivity('${act.id}', ${imgIndex})" 
              class="cursor-pointer carousel-image absolute inset-0 w-full h-full object-cover 
                     transition-opacity duration-500 ${opacityClass}">
-            `;
-        }).join('');
+        `;
+    }).join('');
         
         // ⭐ 方案二的核心逻辑：处理 description 为多个 <p> 标签
         // 1. 按一个或多个连续换行符分割成段落 (/\n\s*\n/)
