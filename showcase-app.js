@@ -93,10 +93,10 @@
 
   function renderStats() {
     const root = $('[data-stats]');
-    const faculty = data.members.filter((m) => m.category === 'faculty').length;
-    const students = data.members.length - faculty;
+    const Supervisor = data.members.filter((m) => m.category === 'Supervisor').length;
+    const students = data.members.length - Supervisor;
     const stats = [
-      ['Faculty', faculty],
+      ['Supervisor', Supervisor],
       ['Students', students],
       ['Publications', data.publications.length],
       ['Research Areas', data.researchAreas.length]
@@ -149,7 +149,7 @@
     const filters = $('[data-member-filters]');
     const labels = [
       ['all', 'All'],
-      ['faculty', 'Faculty'],
+      ['Supervisor', 'Supervisor'],
       ['phd', 'PhD'],
       ['master2025', 'Master 2025'],
       ['master2024', 'Master 2024'],
@@ -187,7 +187,9 @@
     const visible = members.slice(0, state.memberLimit);
     $('[data-member-grid]').innerHTML = visible.map((member) => `
       <a class="member-card reveal" href="${escapeHtml(member.url || '#team')}" ${member.url && member.url.startsWith('http') ? 'target="_blank" rel="noreferrer"' : ''}>
-        <img src="${escapeHtml(previewSrc(member.img))}" alt="${escapeHtml(member.name)}" loading="lazy" onerror="this.src='image/ouc-dig.webp'">
+        <div class="member-card-img">
+          <img src="${escapeHtml(previewSrc(member.img))}" alt="${escapeHtml(member.name)}" loading="lazy" onerror="this.src='image/ouc-dig.webp'">
+        </div>
         <div>
           <h3>${escapeHtml(member.name)}</h3>
           <p>${escapeHtml(member.description || '')}</p>

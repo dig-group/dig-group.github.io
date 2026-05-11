@@ -3,7 +3,7 @@ window.DIG_DATA = {
         {
             "name": "姜桂圆",
             "role": "Associate Professor",
-            "category": "faculty",
+            "category": "Supervisor",
             "img": "image/people/jgy.jpg",
             "description": "副教授 | 博士生导师 | 国家级/省级引才计划中国海洋大学信息科学与工程学部",
             "url": "https://it.ouc.edu.cn/jgy/list.htm"
@@ -11,7 +11,7 @@ window.DIG_DATA = {
         {
             "name": "贺佩兰",
             "role": "Lecturer",
-            "category": "faculty",
+            "category": "Supervisor",
             "img": "image/people/plh.jpg",
             "description": "讲师 | 硕士生导师 | 国家级博士后海外引才计划中国海洋大学信息科学与工程学部",
             "url": "https://it.ouc.edu.cn/hpl/list.htm"
@@ -675,7 +675,7 @@ window.DIG_DATA = {
     title: "公共交通智能优化与拥堵治理",
     eyebrow: "Urban Mobility / Network Science",
     description: "面向城市交通网络中的拥堵传播、公交换乘、多目标路径规划与运行优化，构建可解释、可迁移的数据智能方法。",
-    image: "image/research/1-3.gif",
+    image: "image/research/transportation.png",
     tags: ["Traffic AI", "Congestion", "Optimization", "Network Science"]
   },
   {
@@ -691,7 +691,7 @@ window.DIG_DATA = {
     title: "软件代码智能分析与优化",
     eyebrow: "Program Analysis / Code Intelligence",
     description: "结合控制流、程序依赖图与大模型能力，面向漏洞检测、代码理解、自动化分析与软件安全评估。",
-    image: "image/research/cfg.svg",
+    image: "image/research/3pld.png",
     tags: ["Code AI", "CFG", "PDG", "Security"]
   },
   {
@@ -699,7 +699,7 @@ window.DIG_DATA = {
     title: "人工智能安全与应用",
     eyebrow: "Trusted AI / Graph Security",
     description: "研究图攻击、可信智能、安全优化与复杂系统防护，让 AI 在真实场景中更可靠、更稳健。",
-    image: "image/research/graph_attack.png",
+    image: "image/research/security.png",
     tags: ["Trusted AI", "Graph Attack", "Robustness", "Safety"]
   }
 ]
