@@ -44,6 +44,6 @@ def convert_to_webp(file_path, quality=74, max_side=1600):
 if __name__ == "__main__":
     # python .\conver-img2webp-single.py .\image\research\transportation.png
     if len(sys.argv) < 2:
-        print("用法: python convert.py <文件路径>")
+        print("用法: python convert.p <文件路径>")
     else:
         convert_to_webp(sys.argv[1])

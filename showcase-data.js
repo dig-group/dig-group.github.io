@@ -42,59 +42,59 @@ window.DIG_DATA = {
         },
         {
             "name": "崔龙跃",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/cly.jpg",
-            "description": "研究方向：交通大数据",
+            "description": "2023级，研究方向：交通大数据",
             "url": "#team"
         }, {
             "name": "周承文",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/zcw.png",
-            "description": "研究方向：代码安全",
+            "description": "2023级，研究方向：代码安全",
             "url": "#team"
         }, {
             "name": "吴梦婷",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/wmt.jpg",
-            "description": "研究方向：交通大数据",
+            "description": "2023级，研究方向：交通大数据",
             "url": "#team"
         }, {
             "name": "叶传梁",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/ycl.png",
-            "description": "研究方向：图攻击",
+            "description": "2023级，研究方向：图攻击",
             "url": "#team"
         }, {
             "name": "王以晓",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/wyx.jpg",
-            "description": "研究方向：交通大数据",
+            "description": "2023级，研究方向：交通大数据",
             "url": "#team"
         }, {
             "name": "王浩文",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "PhD Student ",
+            "category": "phd",
             "img": "image/people/whw.png",
             "description": "研究方向：代码安全",
             "url": "#team"
         }, {
             "name": "高荣昊",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/grh.jpg",
-            "description": "研究方向：交通大数据",
+            "description": "2023级，研究方向：交通大数据",
             "url": "#team"
         }, {
             "name": "赵腾飞",
-            "role": "Master Student (2023)",
-            "category": "master2023",
+            "role": "Graduated",
+            "category": "graduated",
             "img": "image/people/ztf.jpg",
-            "description": "研究方向：交通大数据",
+            "description": "2023级，研究方向：交通大数据",
             "url": "#team"
         }, {
             "name": "李豪",
@@ -240,7 +240,7 @@ window.DIG_DATA = {
             "name": "李雨行",
             "role": "Master Student (2025)",
             "category": "master2025",
-            "img": "image/people/liyuhang.jpg",
+            "img": "image/people/liyuxing.jpg",
             "description": "",
             "url": "#team"
         }, {
@@ -664,6 +664,34 @@ window.DIG_DATA = {
             "image/activities/2026/SQT04.jpg",
             "image/activities/2026/SQT05.jpg",
             "image/activities/2026/SQT06.jpg",
+            
+        ]
+    },{
+        id: "act-2026-002",
+        year: 2026,
+        title: "定格盛夏，奔赴山海 | DIG毕业生合影留念",
+        date: "2026-06-17",
+        description: `作为DIG的第一届毕业生，大家不仅见证了团队从起步到成长的过程，也用自己的努力、坚持与热爱，为实验室写下了最初、也最珍贵的一页。第一届，意味着开端，意味着探索，也意味着传承的开始。
+
+白天，我们在西海岸校区图书馆、信息南楼楼下留下了属于DIG的毕业合影。镜头定格的不只是笑容，更是一起讨论课题、修改论文、调试代码、并肩成长的日日夜夜。那些在实验室里奋斗过的时光，终将成为青春里最珍贵的注脚。
+
+傍晚，我们相聚悦海家宴，以一顿温暖的晚餐为毕业生送上祝福。举杯之间，有不舍，有感谢，也有对未来的期待。感谢师兄师姐们一路以来的陪伴、帮助与榜样力量，也祝愿每一位毕业生在新的旅程中继续热爱、继续探索、继续发光。
+
+山海有归期，来日皆可期。
+愿大家此去前程似锦，奔赴山海；
+也愿你们无论走到哪里，都记得DIG永远是温暖的来处。
+
+祝DIG第一届毕业生毕业快乐，未来可期！
+        
+        `,
+        images: [
+            "image/activities/2026/BYJ01.jpg",
+            "image/activities/2026/BYJ02.jpg",
+            "image/activities/2026/BYJ03.jpg",
+            "image/activities/2026/BYJ04.jpg",
+            "image/activities/2026/BYJ05.jpg",
+            "image/activities/2026/BYJ06.jpg",
+            "image/activities/2026/BYJ07.jpg",
             
         ]
     },

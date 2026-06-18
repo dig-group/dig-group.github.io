@@ -54,11 +54,11 @@
 
 更新了三个研究方向的配图：
 
-| 方向 | 原图 | 新图 |
-|------|------|------|
+| 方向                       | 原图                                | 新图                                                         |
+| -------------------------- | ----------------------------------- | ------------------------------------------------------------ |
 | 公共交通智能优化与拥堵治理 | `image/research/1-3.gif` (7.4 MB) | `image/research/transportation.png` (362 KB → 29 KB WebP) |
-| 软件代码智能分析与优化 | `image/research/cfg.svg` | `image/research/3pld.png` |
-| 人工智能安全与应用 | `image/research/graph_attack.png` | `image/research/security.png` |
+| 软件代码智能分析与优化     | `image/research/cfg.svg`          | `image/research/3pld.png`                                  |
+| 人工智能安全与应用         | `image/research/graph_attack.png` | `image/research/security.png`                              |
 
 ### 6. 新增辅助脚本与研究图片资源
 
@@ -79,17 +79,17 @@
 
 ## 相关文件
 
-| 文件 | 改动类型 |
-|------|----------|
-| `showcase-style.css` | 修改 |
-| `showcase-app.js` | 修改 |
-| `showcase-data.js` | 修改 |
-| `showcase.html` | 修改 |
-| `conver-img2webp-single.py` | 新增 |
-| `image/research/security.png` | 新增 |
-| `image/research/security.webp` | 新增 |
-| `image/research/transportation.png` | 新增 |
-| `image/research/transportation.webp` | 新增 |
+| 文件                                   | 改动类型 |
+| -------------------------------------- | -------- |
+| `showcase-style.css`                 | 修改     |
+| `showcase-app.js`                    | 修改     |
+| `showcase-data.js`                   | 修改     |
+| `showcase.html`                      | 修改     |
+| `conver-img2webp-single.py`          | 新增     |
+| `image/research/security.png`        | 新增     |
+| `image/research/security.webp`       | 新增     |
+| `image/research/transportation.png`  | 新增     |
+| `image/research/transportation.webp` | 新增     |
 
 ## 验证方式
 

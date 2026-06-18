@@ -151,9 +151,10 @@
       ['all', 'All'],
       ['Supervisor', 'Supervisor'],
       ['phd', 'PhD'],
+      ['master2026', 'Master 2026'],
       ['master2025', 'Master 2025'],
       ['master2024', 'Master 2024'],
-      ['master2023', 'Master 2023']
+      ['graduated','Graduated']
     ];
     filters.innerHTML = labels.map(([value, label]) => `<button type="button" data-filter="${value}">${label}</button>`).join('');
     filters.addEventListener('click', (event) => {
