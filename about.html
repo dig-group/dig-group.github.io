@@ -1,20 +1,180 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="./showcase.html"> 
-    <title>正在跳转到主页...</title>
-    
-    <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
-        a { color: #007bff; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DIG Group | Data Intelligence Group at Ocean University of China">
+  <meta name="constructor" content="2024 Geng">
+  <title>DIG Group | Data Intelligence Group</title>
+  <link rel="icon" href="image/ouc-dig.png" type="image/png">
+  <link rel="preload" as="image" href="image/ouc-dig.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="showcase-style.css">
 </head>
 <body>
-    <h1>页面已移动</h1>
-    <p>如果浏览器没有自动跳转，请点击下面的链接访问主页：</p>
-    <p><a href="/">点击此处访问主页</a></p>
-    
-    </body>
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="DIG Group home">
+        <img src="image/ouc-dig.webp" alt="DIG Group Logo">
+        <span>
+          <strong>DIG Group</strong>
+          <small>Data Intelligence</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" data-nav>
+        <a href="#research">Research</a>
+        <a href="#team">Team</a>
+        <a href="#publications">Publications</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-dark">
+        <canvas class="hero-canvas" data-hero-canvas aria-hidden="true"></canvas>
+        <div class="hero-orb hero-orb-a"></div>
+        <div class="hero-orb hero-orb-b"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Ocean University of China · Data Intelligence Group</p>
+          <h1><span>DIG</span> turns data into intelligent systems.</h1>
+          <p class="hero-copy">我们面向交通、航空、软件与可信 AI 场景，研究复杂系统中的数据智能、优化决策与安全应用。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">Explore Research</a>
+            <a class="button button-ghost" href="#team">Meet the Team</a>
+          </div>
+        </div>
+        <aside class="hero-panel reveal" aria-label="DIG research highlights">
+          <div class="panel-card active">
+            <span>01</span>
+            <strong>Urban Mobility</strong>
+            <small>Congestion propagation · Journey planning</small>
+          </div>
+          <div class="panel-card">
+            <span>02</span>
+            <strong>Code Intelligence</strong>
+            <small>Program graphs · Vulnerability analysis</small>
+          </div>
+          <div class="panel-card">
+            <span>03</span>
+            <strong>Trusted AI</strong>
+            <small>Graph attack · Robust decision-making</small>
+          </div>
+        </aside>
+        <a class="scroll-cue" href="#snapshot" aria-label="Scroll to lab snapshot">Scroll</a>
+      </section>
+
+      <section id="snapshot" class="snapshot section-light">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Lab Snapshot</p>
+          <h2>一个连接数据、模型与真实系统的研究组。</h2>
+          <p>DIG 聚焦从城市交通网络到软件程序图的复杂数据结构，以机器学习、网络科学和组合优化推动可落地的智能系统研究。</p>
+        </div>
+        <div class="stats-grid reveal" data-stats></div>
+      </section>
+
+      <section id="research" class="research section-dark">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Research Universe</p>
+          <h2>Four directions, one data-intelligence core.</h2>
+        </div>
+        <div class="research-grid" data-research-grid></div>
+      </section>
+
+      <section id="team" class="team section-light">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Team</p>
+          <h2>Team members building intelligent systems together.</h2>
+        </div>
+        <div class="team-photo reveal">
+          <img src="image/members_2025.webp" data-original="image/members_2025.jpg" alt="DIG Group team photo in 2025" loading="lazy">
+          <div><strong>DIG Group, 2025</strong><span>Ocean University of China</span></div>
+        </div>
+        <div class="toolbar reveal">
+          <label class="search-box">
+            <span>Search</span>
+            <input type="search" placeholder="Name, role, research topic..." data-member-search>
+          </label>
+          <div class="filter-pills" data-member-filters></div>
+        </div>
+        <div class="member-grid" data-member-grid></div>
+        <button class="button button-light load-more" type="button" data-member-more>Show more members</button>
+      </section>
+
+      <section id="publications" class="publications section-soft">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Publications</p>
+          <h2>Publications</h2>
+        </div>
+        <div class="publication-years reveal" data-publication-years></div>
+        <div class="publication-list" data-publication-list></div>
+        <button class="button button-light load-more" type="button" data-publication-more>Show more publications</button>
+      </section>
+
+      <section id="activities" class="activities section-light">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Lab Life</p>
+          <h2>山海之间的共同成长</h2>
+        </div>
+        <div class="activity-years reveal" data-activity-years></div>
+        <div class="activity-grid" data-activity-grid></div>
+      </section>
+
+      <section id="contact" class="contact section-dark">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let data intelligence meet real-world systems.</h2>
+          <div class="contact-grid">
+            <div>
+              <strong>Address</strong>
+              <span>中国海洋大学信息科学与工程学部</span>
+              <span>信息南楼b512</span>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <span>jiangguiyuan@ouc.edu.cn<br>hepeilan@ouc.edu.cn</span>
+            </div>
+            <div>
+              <strong>Website</strong>
+              <span>DIG Group · Data Intelligence</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-current-year></span> Data Intelligence Group.</span>
+      <!-- <a href="index.html">Original site</a> -->
+    </footer>
+  </div>
+
+  <div class="image-modal" data-modal hidden>
+    <button class="modal-close" type="button" data-modal-close aria-label="Close image viewer">×</button>
+    <button class="modal-arrow modal-prev" type="button" data-modal-prev aria-label="Previous image">‹</button>
+    <figure>
+      <img src="" alt="" data-modal-image>
+      <figcaption data-modal-caption></figcaption>
+    </figure>
+    <button class="modal-arrow modal-next" type="button" data-modal-next aria-label="Next image">›</button>
+  </div>
+
+  <script src="showcase-data.js"></script>
+  <script src="showcase-app.js"></script>
+</body>
+<!-- 
+tips
+not so good，not so bad
+没有成果之前不放实习 
+无打卡，一周两次组会
+有补贴，有部分横向
+会带学生出去开会
+-->
+
 </html>
