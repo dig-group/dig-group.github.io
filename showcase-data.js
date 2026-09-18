@@ -34,10 +34,18 @@ window.DIG_DATA = {
         },
         {
             "name": "刘泷泽",
-            "role": "PhD Student ",
+            "role": "PhD Student (2026)",
             "category": "phd",
             "img": "image/people/llz.jpg",
             "description": "研究方向：组合优化",
+            "url": "#team"
+        },
+        {
+            "name": "李钊",
+            "role": "PhD Student (2026)",
+            "category": "phd",
+            "img": "image/people/Dr_lizhao.jpg",
+            "description": "研究方向：轨迹预测",
             "url": "#team"
         },
         {
@@ -77,7 +85,7 @@ window.DIG_DATA = {
             "url": "#team"
         }, {
             "name": "王浩文",
-            "role": "PhD Student ",
+            "role": "PhD Student (2026)",
             "category": "phd",
             "img": "image/people/whw.png",
             "description": "研究方向：代码安全",
@@ -257,7 +265,15 @@ window.DIG_DATA = {
             "img": "image/people/ruanminghang.jpg",
             "description": "",
             "url": "#team"
-        }
+        },
+        {
+            "name": "庞建航",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "",
+            "description": "",
+            "url": "#team"
+        },
     ],
   publications: [
         {

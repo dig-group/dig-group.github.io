@@ -151,6 +151,7 @@
       ['all', 'All'],
       ['Supervisor', 'Supervisor'],
       ['phd', 'PhD'],
+    
       ['master2026', 'Master 2026'],
       ['master2025', 'Master 2025'],
       ['master2024', 'Master 2024'],
