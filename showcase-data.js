@@ -41,6 +41,14 @@ window.DIG_DATA = {
             "url": "#team"
         },
         {
+            "name": "王浩文",
+            "role": "PhD Student (2026)",
+            "category": "phd",
+            "img": "image/people/whw.png",
+            "description": "研究方向：代码安全",
+            "url": "#team"
+        },
+        {
             "name": "李钊",
             "role": "PhD Student (2026)",
             "category": "phd",
@@ -82,13 +90,6 @@ window.DIG_DATA = {
             "category": "graduated",
             "img": "image/people/wyx.jpg",
             "description": "2023级，研究方向：交通大数据",
-            "url": "#team"
-        }, {
-            "name": "王浩文",
-            "role": "PhD Student (2026)",
-            "category": "phd",
-            "img": "image/people/whw.png",
-            "description": "研究方向：代码安全",
             "url": "#team"
         }, {
             "name": "高荣昊",
@@ -207,73 +208,137 @@ window.DIG_DATA = {
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/yuchong.jpg",
-            "description": "",
+            "description": "研究方向：无人机攻击",
             "url": "#team"
         }, {
             "name": "吴子博",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/wuzibo.jpg",
-            "description": "",
+            "description": "研究方向：医疗诊断",
             "url": "#team"
         }, {
             "name": "匡淼",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/kuangmiao.jpg",
-            "description": "",
+            "description": "研究方向：航空轨迹生成",
             "url": "#team"
         }, {
             "name": "李子昊",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/lizihao.jpg",
-            "description": "",
+            "description": "研究方向：自动化补丁正确性评估",
             "url": "#team"
         }, {
             "name": "陈明威",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/chenmingwei.jpg",
-            "description": "",
+            "description": "研究方向：轨迹表征学习",
             "url": "#team"
         }, {
             "name": "朱峰辉",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/zhufenghui.png",
-            "description": "",
+            "description": "研究方向：显著性目标检测",
             "url": "#team"
         }, {
             "name": "李雨行",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/liyuxing.jpg",
-            "description": "",
+            "description": "研究方向：无人机协作与冲突消解",
             "url": "#team"
         }, {
             "name": "田恩",
             "role": "Master Student (2025)",
             "category": "master2025",
             "img": "image/people/tianen.jpg",
-            "description": "",
+            "description": "研究方向：ODTTE",
             "url": "#team"
         }, {
             "name": "阮明航",
             "role": "Master Student (2025)",
             "category": "master2025",
-            "img": "image/people/ruanminghang.jpg",
-            "description": "",
+            "img": "image/people/rmh.jpg",
+            "description": "研究方向：渔船轨迹预测",
             "url": "#team"
         },
         {
             "name": "庞建航",
             "role": "Master Student (2026)",
             "category": "master2026",
-            "img": "",
-            "description": "",
+            "img": "image/people/26pjh.jpg",
+            "description": "研究方向：航空轨迹生成",
             "url": "#team"
         },
+        {
+            "name": "刘昱豪",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26lyh.jpg",
+            "description": "研究方向：无人机路径规划",
+            "url": "#team"
+        },
+        {
+            "name": "李修和",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26lxh.jpg",
+            "description": "研究方向：航空轨迹预测",
+            "url": "#team"
+        },
+        {
+            "name": "吕承飞",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26lcf.jpg",
+            "description": "研究方向：无人机路径规划",
+            "url": "#team"
+        },
+        {
+            "name": "钱雪明",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26qxm.jpg",
+            "description": "研究方向：无人机安全",
+            "url": "#team"
+        },
+        {
+            "name": "毛浩知",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26mhz.jpg",
+            "description": "研究方向：软件代码安全",
+            "url": "#team"
+        },
+        {
+            "name": "孙文慧",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26swh.jpg",
+            "description": "研究方向：OD路径生成",
+            "url": "#team"
+        },
+        {
+            "name": "晁嘉鹏",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26cjp.jpg",
+            "description": "研究方向：医疗数据分析",
+            "url": "#team"
+        },
+        {
+            "name": "王焙",
+            "role": "Master Student (2026)",
+            "category": "master2026",
+            "img": "image/people/26wb.jpg",
+            "description": "研究方向：医疗数据分析",
+            "url": "#team"
+        }
     ],
   publications: [
         {
